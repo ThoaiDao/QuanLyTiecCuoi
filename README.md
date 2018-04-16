@@ -2,7 +2,7 @@
 <p>Phần mềm quản lý tiệc cưới</p>
 
 ### Giới Thiệu Nhóm
-<img src="http://httt.uit.edu.vn/beta/wp-content/uploads/2016/01/uit_is_footer.png" alt="logo uit" width="350"/>
+<img src="https://uit360.xyz/" alt="logo uit" width="350"/>
 
 <p>Tên Nhóm: Nhóm Black</p>
 <p>Khoa: Hệ Thống Thông Tin</p>
