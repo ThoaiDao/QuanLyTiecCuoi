@@ -1,10 +1,10 @@
+
+[![N|Solid](https://i.imgur.com/co6SMdm.png)](https://www.uit.edu.vn/)
+---
 ### Tên Đề Tài
 <p>Phần mềm quản lý tiệc cưới</p>
 
 ### Giới Thiệu Nhóm
-[![N|Solid](https://i.imgur.com/co6SMdm.png)](https://www.uit.edu.vn/)
----
-
 
 <p>Tên Nhóm: Nhóm Black</p>
 <p>Khoa: Hệ Thống Thông Tin</p>
