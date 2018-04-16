@@ -9,7 +9,7 @@
 <p>Tên Nhóm: Nhóm Black</p>
 <p>Khoa: Hệ Thống Thông Tin</p>
 
-### Giới Thiệu Tổng Quát Về Phần Mềm
+### Giới Thiệu Tổng Quát 
   <p>Qua tìm hiểu, khảo sát nhu cầu và đánh giá xu hướng công nghệ thiện nay, nhóm chúng em quyết định xây dựng một hệ thông vs phần mềm quản lý nhà hàng tiệc cưới mục đích là giúp cho các nhà hàng quản lý tiệc cưới một cách thông minh, hiệu quả, đang tin cậy và chất lượng và dễ dàng, dễ đặt tiệc cho người đặt tiệc cưới. Đáp ứng nhu cầu ngày càng tăng trong công việc gia đình của rất nhiều người trong xã hội hiện nay.</p>
 
             
