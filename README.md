@@ -2,7 +2,7 @@
 <p>Phần mềm quản lý tiệc cưới</p>
 
 ### Giới Thiệu Nhóm
-<img src="https://uit360.xyz/img/img_cntt.png" alt="logo uit" width="350"/>
+<img src="https://uit360.xyz/img/img_cntt.png" alt="logo uit" width="100%"/>
 
 
 
