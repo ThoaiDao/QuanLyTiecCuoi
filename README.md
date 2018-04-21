@@ -8,7 +8,7 @@
 
 ><p>Tên Nhóm: Nhóm Black</p>
 ><p>Khoa: Hệ Thống Thông Tin</p>
-><p>Thành Viên: Huyền Thoại, Thu Thiên, Thái Dưng, Duy Tân</p>
+><p>Thành Viên: Huyền Thoại, Thu Thiên, Thái Dương, Duy Tân</p>
 ><p>Giảng Viên: Nguyễn Công Hoan</p>
 
 _**Giới Thiệu**_
