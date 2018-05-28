@@ -18,11 +18,8 @@ D:\HK2 (năm 2)\Thực hành cnpm\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.
 D:\HK2 (năm 2)\Thực hành cnpm\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.BaoCao.resources
 D:\HK2 (năm 2)\Thực hành cnpm\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.TraCuuNhanVien.resources
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\bin\Debug\QL_TiecCuoi.exe.config
-C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.exe
-C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.pdb
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\bin\Debug\QL_TiecCuoi.exe
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\bin\Debug\QL_TiecCuoi.pdb
-C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.csprojResolveAssemblyReference.cache
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.BaoCao.resources
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.DangNhap.resources
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.LapHoaDon.resources
@@ -36,3 +33,7 @@ C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\ob
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.TraCuuHopDong.resources
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.TraCuuNhanVien.resources
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.csproj.GenerateResource.Cache
+C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.exe
+C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.pdb
+C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.csprojResolveAssemblyReference.cache
+C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.ThemSanhMoi.resources

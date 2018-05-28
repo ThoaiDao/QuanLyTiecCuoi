@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QL_TiecCuoi.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace QL_TiecCuoi
 {
     public partial class DangNhap : Form
@@ -15,60 +17,79 @@ namespace QL_TiecCuoi
         public DangNhap()
         {
             InitializeComponent();
-            textBox1.ForeColor = Color.LightGray;
-            textBox1.Text = "Tên Đăng Nhập";
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            textBoxTenDangNhap.ForeColor = Color.LightGray;
+            textBoxTenDangNhap.Text = "Tên Đăng Nhập";
+            this.textBoxTenDangNhap.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.textBoxTenDangNhap.Enter += new System.EventHandler(this.textBox1_Enter);
 
-            textBox2.ForeColor = Color.LightGray;
-            textBox2.Text = "Mật Khẩu";
-            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
-            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            textBoxMatKhau.ForeColor = Color.LightGray;
+            textBoxMatKhau.Text = "Mật Khẩu";
+            this.textBoxMatKhau.Leave += new System.EventHandler(this.textBox2_Leave);
+            this.textBoxMatKhau.Enter += new System.EventHandler(this.textBox2_Enter);
         }
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            if (textBoxTenDangNhap.Text == "")
             {
-                textBox1.Text = "Tên Đăng Nhập";
-                textBox1.ForeColor = Color.Gray;
+                textBoxTenDangNhap.Text = "Tên Đăng Nhập";
+                textBoxTenDangNhap.ForeColor = Color.Gray;
             }
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Tên Đăng Nhập")
+            if (textBoxTenDangNhap.Text == "Tên Đăng Nhập")
             {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.Black;
+                textBoxTenDangNhap.Text = "";
+                textBoxTenDangNhap.ForeColor = Color.Black;
             }
         }
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text == "Mật Khẩu")
+            if (textBoxMatKhau.Text == "Mật Khẩu")
             {
-                textBox2.Text = "";
-                textBox2.ForeColor = Color.Black;
+                textBoxMatKhau.Text = "";
+                textBoxMatKhau.ForeColor = Color.Black;
             }
         }
 
         private void textBox2_Leave(object sender, EventArgs e)
         {
-            if (textBox2.Text == "")
+            if (textBoxMatKhau.Text == "")
             {
-                textBox2.Text = "Mật Khẩu";
-                textBox2.ForeColor = Color.Gray;
+                textBoxMatKhau.Text = "Mật Khẩu";
+                textBoxMatKhau.ForeColor = Color.Gray;
                
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form frm = new Menu();
-            frm.ShowDialog();
+   
+            string TenDangNhap = textBoxTenDangNhap.Text;
+            string MatKhau = textBoxMatKhau.Text;
+            //if (_DangNhap(TenDangNhap, MatKhau))
+            if (true)
+            {
+                this.Hide();
+                Form frm = new Menu();
+                frm.ShowDialog();
+            }
+            else
+            {
+                if (MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
+                {
+                    this.Hide();
+                    Form frm = new DangNhap();
+                    frm.ShowDialog();
+                }
+            }
         }
-
+        bool _DangNhap(string TenDangNhap, string MatKhau)
+        {
+            return DangNhapDAO.Instance.DangNhap(TenDangNhap, MatKhau);
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn chắc chắn muốn đóng ứng dụng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
@@ -76,5 +97,7 @@ namespace QL_TiecCuoi
                 Application.Exit();
             }
         }
+
+       
     }
 }

@@ -31,31 +31,33 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TraCuuHoaDon));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDSHoaDon = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonXoa = new System.Windows.Forms.Button();
+            this.buttonSua = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.textBoxTimHoaDon = new System.Windows.Forms.TextBox();
+            this.radioButtonTenKH = new System.Windows.Forms.RadioButton();
+            this.buttonTim = new System.Windows.Forms.Button();
+            this.radioButtonMaHD = new System.Windows.Forms.RadioButton();
+            this.buttonXem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonXem);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.buttonXoa);
+            this.panel1.Controls.Add(this.buttonSua);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.radioButton2);
+            this.panel1.Controls.Add(this.textBoxTimHoaDon);
+            this.panel1.Controls.Add(this.radioButtonTenKH);
+            this.panel1.Controls.Add(this.buttonTim);
+            this.panel1.Controls.Add(this.radioButtonMaHD);
             this.panel1.Location = new System.Drawing.Point(2, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(724, 417);
@@ -63,7 +65,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dataGridViewDSHoaDon);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(10, 154);
@@ -73,13 +75,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hóa đơn";
             // 
-            // dataGridView1
+            // dataGridViewDSHoaDon
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 29);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(690, 189);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewDSHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDSHoaDon.Location = new System.Drawing.Point(6, 29);
+            this.dataGridViewDSHoaDon.Name = "dataGridViewDSHoaDon";
+            this.dataGridViewDSHoaDon.Size = new System.Drawing.Size(690, 189);
+            this.dataGridViewDSHoaDon.TabIndex = 0;
             // 
             // button5
             // 
@@ -92,27 +94,27 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // buttonXoa
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(490, 384);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Xóa";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.buttonXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXoa.Location = new System.Drawing.Point(490, 384);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(75, 23);
+            this.buttonXoa.TabIndex = 10;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // buttonSua
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(365, 384);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Sửa";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.buttonSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSua.Location = new System.Drawing.Point(365, 384);
+            this.buttonSua.Name = "buttonSua";
+            this.buttonSua.Size = new System.Drawing.Size(75, 23);
+            this.buttonSua.TabIndex = 9;
+            this.buttonSua.Text = "Sửa";
+            this.buttonSua.UseVisualStyleBackColor = true;
+            this.buttonSua.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -126,46 +128,60 @@
             this.label1.Text = "Tra Cứu Hóa Đơn";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // textBoxTimHoaDon
             // 
-            this.textBox1.Location = new System.Drawing.Point(278, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxTimHoaDon.Location = new System.Drawing.Point(278, 52);
+            this.textBoxTimHoaDon.Name = "textBoxTimHoaDon";
+            this.textBoxTimHoaDon.Size = new System.Drawing.Size(177, 20);
+            this.textBoxTimHoaDon.TabIndex = 1;
+            this.textBoxTimHoaDon.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // radioButton1
+            // radioButtonTenKH
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(259, 78);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(126, 20);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tên Khách Hàng";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonTenKH.AutoSize = true;
+            this.radioButtonTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonTenKH.Location = new System.Drawing.Point(259, 78);
+            this.radioButtonTenKH.Name = "radioButtonTenKH";
+            this.radioButtonTenKH.Size = new System.Drawing.Size(121, 20);
+            this.radioButtonTenKH.TabIndex = 4;
+            this.radioButtonTenKH.TabStop = true;
+            this.radioButtonTenKH.Text = "Mã Khách Hàng";
+            this.radioButtonTenKH.UseVisualStyleBackColor = true;
+            this.radioButtonTenKH.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // button1
+            // buttonTim
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(321, 115);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Tìm ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTim.Location = new System.Drawing.Point(579, 116);
+            this.buttonTim.Name = "buttonTim";
+            this.buttonTim.Size = new System.Drawing.Size(75, 23);
+            this.buttonTim.TabIndex = 6;
+            this.buttonTim.Text = "Tìm ";
+            this.buttonTim.UseVisualStyleBackColor = true;
+            this.buttonTim.Click += new System.EventHandler(this.buttonTim_Click);
             // 
-            // radioButton2
+            // radioButtonMaHD
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(392, 78);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(101, 20);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Mã Hóa Đơn";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonMaHD.AutoSize = true;
+            this.radioButtonMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMaHD.Location = new System.Drawing.Point(392, 78);
+            this.radioButtonMaHD.Name = "radioButtonMaHD";
+            this.radioButtonMaHD.Size = new System.Drawing.Size(101, 20);
+            this.radioButtonMaHD.TabIndex = 5;
+            this.radioButtonMaHD.TabStop = true;
+            this.radioButtonMaHD.Text = "Mã Hóa Đơn";
+            this.radioButtonMaHD.UseVisualStyleBackColor = true;
+            // 
+            // buttonXem
+            // 
+            this.buttonXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXem.Location = new System.Drawing.Point(455, 116);
+            this.buttonXem.Name = "buttonXem";
+            this.buttonXem.Size = new System.Drawing.Size(75, 23);
+            this.buttonXem.TabIndex = 13;
+            this.buttonXem.Text = "Xem";
+            this.buttonXem.UseVisualStyleBackColor = true;
+            this.buttonXem.Click += new System.EventHandler(this.buttonXem_Click);
             // 
             // TraCuuHoaDon
             // 
@@ -181,7 +197,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,14 +206,15 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox textBoxTimHoaDon;
+        private System.Windows.Forms.RadioButton radioButtonTenKH;
+        private System.Windows.Forms.Button buttonTim;
+        private System.Windows.Forms.RadioButton radioButtonMaHD;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewDSHoaDon;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonXoa;
+        private System.Windows.Forms.Button buttonSua;
+        private System.Windows.Forms.Button buttonXem;
     }
 }

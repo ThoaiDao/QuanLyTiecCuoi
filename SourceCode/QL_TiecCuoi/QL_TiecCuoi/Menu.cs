@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace QL_TiecCuoi
 {
     public partial class Menu : Form
@@ -86,6 +86,16 @@ namespace QL_TiecCuoi
             this.Hide();
             Form frm = new BaoCao();
             frm.ShowDialog();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

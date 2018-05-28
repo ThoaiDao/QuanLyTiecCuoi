@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThongTinTiec));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBoxNuocNgot = new System.Windows.Forms.TextBox();
+            this.textBoxBia = new System.Windows.Forms.TextBox();
+            this.textBoxTrangMieng = new System.Windows.Forms.TextBox();
+            this.textBoxLau = new System.Windows.Forms.TextBox();
+            this.textBoxMonChinh3 = new System.Windows.Forms.TextBox();
+            this.textBoxMonChinh2 = new System.Windows.Forms.TextBox();
+            this.textBoxMonChinh1 = new System.Windows.Forms.TextBox();
+            this.textBoxMonKhaiVi = new System.Windows.Forms.TextBox();
+            this.comboBoxThucDon = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,12 +50,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView14 = new System.Windows.Forms.DataGridView();
-            this.dataGridView13 = new System.Windows.Forms.DataGridView();
-            this.dataGridView12 = new System.Windows.Forms.DataGridView();
-            this.dataGridView11 = new System.Windows.Forms.DataGridView();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.textBoxDJ = new System.Windows.Forms.TextBox();
+            this.textBoxCaSi = new System.Windows.Forms.TextBox();
+            this.textBoxBanNhac = new System.Windows.Forms.TextBox();
+            this.textBoxMC = new System.Windows.Forms.TextBox();
+            this.textBoxBanhKem = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -70,38 +69,25 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxDichVu = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBoxRuou = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView8);
-            this.groupBox1.Controls.Add(this.dataGridView7);
-            this.groupBox1.Controls.Add(this.dataGridView6);
-            this.groupBox1.Controls.Add(this.dataGridView5);
-            this.groupBox1.Controls.Add(this.dataGridView4);
-            this.groupBox1.Controls.Add(this.dataGridView3);
-            this.groupBox1.Controls.Add(this.dataGridView2);
-            this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.textBoxNuocNgot);
+            this.groupBox1.Controls.Add(this.textBoxBia);
+            this.groupBox1.Controls.Add(this.textBoxTrangMieng);
+            this.groupBox1.Controls.Add(this.textBoxLau);
+            this.groupBox1.Controls.Add(this.textBoxMonChinh3);
+            this.groupBox1.Controls.Add(this.textBoxMonChinh2);
+            this.groupBox1.Controls.Add(this.textBoxMonChinh1);
+            this.groupBox1.Controls.Add(this.textBoxMonKhaiVi);
+            this.groupBox1.Controls.Add(this.comboBoxThucDon);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -120,77 +106,79 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thực đơn";
             // 
-            // dataGridView8
+            // textBoxNuocNgot
             // 
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(101, 275);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(167, 26);
-            this.dataGridView8.TabIndex = 16;
+            this.textBoxNuocNgot.Location = new System.Drawing.Point(101, 275);
+            this.textBoxNuocNgot.Multiline = true;
+            this.textBoxNuocNgot.Name = "textBoxNuocNgot";
+            this.textBoxNuocNgot.Size = new System.Drawing.Size(167, 26);
+            this.textBoxNuocNgot.TabIndex = 15;
             // 
-            // dataGridView7
+            // textBoxBia
             // 
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(101, 243);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(167, 26);
-            this.dataGridView7.TabIndex = 15;
+            this.textBoxBia.Location = new System.Drawing.Point(101, 243);
+            this.textBoxBia.Multiline = true;
+            this.textBoxBia.Name = "textBoxBia";
+            this.textBoxBia.Size = new System.Drawing.Size(167, 26);
+            this.textBoxBia.TabIndex = 14;
             // 
-            // dataGridView6
+            // textBoxTrangMieng
             // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(101, 211);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(167, 26);
-            this.dataGridView6.TabIndex = 14;
+            this.textBoxTrangMieng.Location = new System.Drawing.Point(101, 211);
+            this.textBoxTrangMieng.Multiline = true;
+            this.textBoxTrangMieng.Name = "textBoxTrangMieng";
+            this.textBoxTrangMieng.Size = new System.Drawing.Size(167, 26);
+            this.textBoxTrangMieng.TabIndex = 13;
             // 
-            // dataGridView5
+            // textBoxLau
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(101, 179);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(167, 26);
-            this.dataGridView5.TabIndex = 13;
+            this.textBoxLau.Location = new System.Drawing.Point(101, 179);
+            this.textBoxLau.Multiline = true;
+            this.textBoxLau.Name = "textBoxLau";
+            this.textBoxLau.Size = new System.Drawing.Size(167, 26);
+            this.textBoxLau.TabIndex = 12;
             // 
-            // dataGridView4
+            // textBoxMonChinh3
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(101, 147);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(167, 26);
-            this.dataGridView4.TabIndex = 12;
+            this.textBoxMonChinh3.Location = new System.Drawing.Point(101, 147);
+            this.textBoxMonChinh3.Multiline = true;
+            this.textBoxMonChinh3.Name = "textBoxMonChinh3";
+            this.textBoxMonChinh3.Size = new System.Drawing.Size(167, 26);
+            this.textBoxMonChinh3.TabIndex = 11;
             // 
-            // dataGridView3
+            // textBoxMonChinh2
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(101, 115);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(167, 26);
-            this.dataGridView3.TabIndex = 11;
+            this.textBoxMonChinh2.Location = new System.Drawing.Point(101, 115);
+            this.textBoxMonChinh2.Multiline = true;
+            this.textBoxMonChinh2.Name = "textBoxMonChinh2";
+            this.textBoxMonChinh2.Size = new System.Drawing.Size(167, 26);
+            this.textBoxMonChinh2.TabIndex = 10;
             // 
-            // dataGridView2
+            // textBoxMonChinh1
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(101, 83);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(167, 26);
-            this.dataGridView2.TabIndex = 10;
+            this.textBoxMonChinh1.Location = new System.Drawing.Point(101, 83);
+            this.textBoxMonChinh1.Multiline = true;
+            this.textBoxMonChinh1.Name = "textBoxMonChinh1";
+            this.textBoxMonChinh1.Size = new System.Drawing.Size(167, 26);
+            this.textBoxMonChinh1.TabIndex = 9;
             // 
-            // dataGridView1
+            // textBoxMonKhaiVi
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(101, 51);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(167, 26);
-            this.dataGridView1.TabIndex = 0;
+            this.textBoxMonKhaiVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMonKhaiVi.Location = new System.Drawing.Point(101, 51);
+            this.textBoxMonKhaiVi.Multiline = true;
+            this.textBoxMonKhaiVi.Name = "textBoxMonKhaiVi";
+            this.textBoxMonKhaiVi.Size = new System.Drawing.Size(167, 26);
+            this.textBoxMonKhaiVi.TabIndex = 4;
             // 
-            // comboBox1
+            // comboBoxThucDon
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(101, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 24);
-            this.comboBox1.TabIndex = 0;
+            this.comboBoxThucDon.FormattingEnabled = true;
+            this.comboBoxThucDon.Location = new System.Drawing.Point(101, 21);
+            this.comboBoxThucDon.Name = "comboBoxThucDon";
+            this.comboBoxThucDon.Size = new System.Drawing.Size(167, 24);
+            this.comboBoxThucDon.TabIndex = 0;
+            this.comboBoxThucDon.SelectedIndexChanged += new System.EventHandler(this.comboBoxThucDon_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -295,12 +283,11 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView14);
-            this.groupBox2.Controls.Add(this.dataGridView13);
-            this.groupBox2.Controls.Add(this.dataGridView12);
-            this.groupBox2.Controls.Add(this.dataGridView11);
-            this.groupBox2.Controls.Add(this.dataGridView10);
-            this.groupBox2.Controls.Add(this.dataGridView9);
+            this.groupBox2.Controls.Add(this.textBoxDJ);
+            this.groupBox2.Controls.Add(this.textBoxCaSi);
+            this.groupBox2.Controls.Add(this.textBoxBanNhac);
+            this.groupBox2.Controls.Add(this.textBoxMC);
+            this.groupBox2.Controls.Add(this.textBoxBanhKem);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label15);
@@ -315,7 +302,7 @@
             this.groupBox2.Controls.Add(this.checkBox3);
             this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.checkBox1);
-            this.groupBox2.Controls.Add(this.comboBox2);
+            this.groupBox2.Controls.Add(this.comboBoxDichVu);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -326,53 +313,45 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dịch vụ";
             // 
-            // dataGridView14
+            // textBoxDJ
             // 
-            this.dataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView14.Location = new System.Drawing.Point(233, 211);
-            this.dataGridView14.Name = "dataGridView14";
-            this.dataGridView14.Size = new System.Drawing.Size(94, 26);
-            this.dataGridView14.TabIndex = 34;
+            this.textBoxDJ.Location = new System.Drawing.Point(233, 211);
+            this.textBoxDJ.Multiline = true;
+            this.textBoxDJ.Name = "textBoxDJ";
+            this.textBoxDJ.Size = new System.Drawing.Size(94, 26);
+            this.textBoxDJ.TabIndex = 34;
             // 
-            // dataGridView13
+            // textBoxCaSi
             // 
-            this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView13.Location = new System.Drawing.Point(233, 179);
-            this.dataGridView13.Name = "dataGridView13";
-            this.dataGridView13.Size = new System.Drawing.Size(94, 26);
-            this.dataGridView13.TabIndex = 33;
+            this.textBoxCaSi.Location = new System.Drawing.Point(233, 179);
+            this.textBoxCaSi.Multiline = true;
+            this.textBoxCaSi.Name = "textBoxCaSi";
+            this.textBoxCaSi.Size = new System.Drawing.Size(94, 26);
+            this.textBoxCaSi.TabIndex = 33;
             // 
-            // dataGridView12
+            // textBoxBanNhac
             // 
-            this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView12.Location = new System.Drawing.Point(233, 147);
-            this.dataGridView12.Name = "dataGridView12";
-            this.dataGridView12.Size = new System.Drawing.Size(94, 26);
-            this.dataGridView12.TabIndex = 32;
+            this.textBoxBanNhac.Location = new System.Drawing.Point(233, 147);
+            this.textBoxBanNhac.Multiline = true;
+            this.textBoxBanNhac.Name = "textBoxBanNhac";
+            this.textBoxBanNhac.Size = new System.Drawing.Size(94, 26);
+            this.textBoxBanNhac.TabIndex = 32;
             // 
-            // dataGridView11
+            // textBoxMC
             // 
-            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView11.Location = new System.Drawing.Point(233, 115);
-            this.dataGridView11.Name = "dataGridView11";
-            this.dataGridView11.Size = new System.Drawing.Size(94, 26);
-            this.dataGridView11.TabIndex = 31;
+            this.textBoxMC.Location = new System.Drawing.Point(233, 115);
+            this.textBoxMC.Multiline = true;
+            this.textBoxMC.Name = "textBoxMC";
+            this.textBoxMC.Size = new System.Drawing.Size(94, 26);
+            this.textBoxMC.TabIndex = 31;
             // 
-            // dataGridView10
+            // textBoxBanhKem
             // 
-            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Location = new System.Drawing.Point(233, 83);
-            this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.Size = new System.Drawing.Size(94, 26);
-            this.dataGridView10.TabIndex = 30;
-            // 
-            // dataGridView9
-            // 
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(233, 51);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.Size = new System.Drawing.Size(94, 26);
-            this.dataGridView9.TabIndex = 17;
+            this.textBoxBanhKem.Location = new System.Drawing.Point(233, 83);
+            this.textBoxBanhKem.Multiline = true;
+            this.textBoxBanhKem.Name = "textBoxBanhKem";
+            this.textBoxBanhKem.Size = new System.Drawing.Size(94, 26);
+            this.textBoxBanhKem.TabIndex = 30;
             // 
             // label17
             // 
@@ -521,14 +500,16 @@
             this.checkBox1.TabIndex = 18;
             this.checkBox1.Text = "Giữ xe";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // comboBox2
+            // comboBoxDichVu
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(162, 21);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(165, 24);
-            this.comboBox2.TabIndex = 17;
+            this.comboBoxDichVu.FormattingEnabled = true;
+            this.comboBoxDichVu.Location = new System.Drawing.Point(162, 21);
+            this.comboBoxDichVu.Name = "comboBoxDichVu";
+            this.comboBoxDichVu.Size = new System.Drawing.Size(165, 24);
+            this.comboBoxDichVu.TabIndex = 17;
+            this.comboBoxDichVu.SelectedIndexChanged += new System.EventHandler(this.comboBoxDichVu_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -550,11 +531,20 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // textBoxRuou
+            // 
+            this.textBoxRuou.Location = new System.Drawing.Point(558, 90);
+            this.textBoxRuou.Multiline = true;
+            this.textBoxRuou.Name = "textBoxRuou";
+            this.textBoxRuou.Size = new System.Drawing.Size(94, 26);
+            this.textBoxRuou.TabIndex = 16;
+            // 
             // ThongTinTiec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 432);
+            this.Controls.Add(this.textBoxRuou);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
@@ -564,24 +554,11 @@
             this.Name = "ThongTinTiec";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý tiệc cưới";
+            this.Load += new System.EventHandler(this.ThongTinTiec_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -592,15 +569,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView8;
-        private System.Windows.Forms.DataGridView dataGridView7;
-        private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxThucDon;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -610,12 +579,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView14;
-        private System.Windows.Forms.DataGridView dataGridView13;
-        private System.Windows.Forms.DataGridView dataGridView12;
-        private System.Windows.Forms.DataGridView dataGridView11;
-        private System.Windows.Forms.DataGridView dataGridView10;
-        private System.Windows.Forms.DataGridView dataGridView9;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -630,8 +593,22 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxDichVu;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBoxNuocNgot;
+        private System.Windows.Forms.TextBox textBoxBia;
+        private System.Windows.Forms.TextBox textBoxTrangMieng;
+        private System.Windows.Forms.TextBox textBoxLau;
+        private System.Windows.Forms.TextBox textBoxMonChinh3;
+        private System.Windows.Forms.TextBox textBoxMonChinh2;
+        private System.Windows.Forms.TextBox textBoxMonChinh1;
+        private System.Windows.Forms.TextBox textBoxMonKhaiVi;
+        private System.Windows.Forms.TextBox textBoxDJ;
+        private System.Windows.Forms.TextBox textBoxCaSi;
+        private System.Windows.Forms.TextBox textBoxBanNhac;
+        private System.Windows.Forms.TextBox textBoxMC;
+        private System.Windows.Forms.TextBox textBoxBanhKem;
+        private System.Windows.Forms.TextBox textBoxRuou;
     }
 }

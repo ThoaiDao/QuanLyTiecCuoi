@@ -58,6 +58,20 @@
     <Compile Include="DangNhap.Designer.cs">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\DangNhapDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DichVuDAO.cs" />
+    <Compile Include="DAO\LapHopDongDAO.cs" />
+    <Compile Include="DAO\ThongTinSanhDAO.cs" />
+    <Compile Include="DAO\ThongTinTiecDAO.cs" />
+    <Compile Include="DAO\ThucDonDAO.cs" />
+    <Compile Include="DTO\Class1.cs" />
+    <Compile Include="ThemSanhMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemSanhMoi.Designer.cs">
+      <DependentUpon>ThemSanhMoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="LapHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +153,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ThemSanhMoi.resx">
+      <DependentUpon>ThemSanhMoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThongTinSanh.resx">
       <DependentUpon>ThongTinSanh.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +205,7 @@
   <ItemGroup>
     <None Include="Resources\31956960_601888670189121_3962073146915291136_n.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
