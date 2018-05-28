@@ -30,20 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TraCuuHoaDon));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonXem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewDSHoaDon = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTraCuuHoaDon = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.buttonXoa = new System.Windows.Forms.Button();
-            this.buttonSua = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxTimHoaDon = new System.Windows.Forms.TextBox();
             this.radioButtonTenKH = new System.Windows.Forms.RadioButton();
             this.buttonTim = new System.Windows.Forms.Button();
             this.radioButtonMaHD = new System.Windows.Forms.RadioButton();
-            this.buttonXem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTraCuuHoaDon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,7 +51,6 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.buttonXoa);
-            this.panel1.Controls.Add(this.buttonSua);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBoxTimHoaDon);
             this.panel1.Controls.Add(this.radioButtonTenKH);
@@ -63,9 +61,20 @@
             this.panel1.Size = new System.Drawing.Size(724, 417);
             this.panel1.TabIndex = 11;
             // 
+            // buttonXem
+            // 
+            this.buttonXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonXem.Location = new System.Drawing.Point(455, 116);
+            this.buttonXem.Name = "buttonXem";
+            this.buttonXem.Size = new System.Drawing.Size(75, 23);
+            this.buttonXem.TabIndex = 13;
+            this.buttonXem.Text = "Xem";
+            this.buttonXem.UseVisualStyleBackColor = true;
+            this.buttonXem.Click += new System.EventHandler(this.buttonXem_Click);
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridViewDSHoaDon);
+            this.groupBox1.Controls.Add(this.dataGridViewTraCuuHoaDon);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(10, 154);
@@ -75,13 +84,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hóa đơn";
             // 
-            // dataGridViewDSHoaDon
+            // dataGridViewTraCuuHoaDon
             // 
-            this.dataGridViewDSHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDSHoaDon.Location = new System.Drawing.Point(6, 29);
-            this.dataGridViewDSHoaDon.Name = "dataGridViewDSHoaDon";
-            this.dataGridViewDSHoaDon.Size = new System.Drawing.Size(690, 189);
-            this.dataGridViewDSHoaDon.TabIndex = 0;
+            this.dataGridViewTraCuuHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTraCuuHoaDon.Location = new System.Drawing.Point(6, 29);
+            this.dataGridViewTraCuuHoaDon.Name = "dataGridViewTraCuuHoaDon";
+            this.dataGridViewTraCuuHoaDon.Size = new System.Drawing.Size(690, 189);
+            this.dataGridViewTraCuuHoaDon.TabIndex = 0;
             // 
             // button5
             // 
@@ -104,17 +113,6 @@
             this.buttonXoa.Text = "Xóa";
             this.buttonXoa.UseVisualStyleBackColor = true;
             this.buttonXoa.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // buttonSua
-            // 
-            this.buttonSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSua.Location = new System.Drawing.Point(365, 384);
-            this.buttonSua.Name = "buttonSua";
-            this.buttonSua.Size = new System.Drawing.Size(75, 23);
-            this.buttonSua.TabIndex = 9;
-            this.buttonSua.Text = "Sửa";
-            this.buttonSua.UseVisualStyleBackColor = true;
-            this.buttonSua.Click += new System.EventHandler(this.button3_Click);
             // 
             // label1
             // 
@@ -172,17 +170,6 @@
             this.radioButtonMaHD.Text = "Mã Hóa Đơn";
             this.radioButtonMaHD.UseVisualStyleBackColor = true;
             // 
-            // buttonXem
-            // 
-            this.buttonXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXem.Location = new System.Drawing.Point(455, 116);
-            this.buttonXem.Name = "buttonXem";
-            this.buttonXem.Size = new System.Drawing.Size(75, 23);
-            this.buttonXem.TabIndex = 13;
-            this.buttonXem.Text = "Xem";
-            this.buttonXem.UseVisualStyleBackColor = true;
-            this.buttonXem.Click += new System.EventHandler(this.buttonXem_Click);
-            // 
             // TraCuuHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,7 +184,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTraCuuHoaDon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,10 +198,9 @@
         private System.Windows.Forms.Button buttonTim;
         private System.Windows.Forms.RadioButton radioButtonMaHD;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridViewDSHoaDon;
+        private System.Windows.Forms.DataGridView dataGridViewTraCuuHoaDon;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button buttonXoa;
-        private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonXem;
     }
 }

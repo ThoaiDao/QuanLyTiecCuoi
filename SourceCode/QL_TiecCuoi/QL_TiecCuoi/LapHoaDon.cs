@@ -24,9 +24,7 @@ namespace QL_TiecCuoi
         private Panel panel2;
         private Label label1;
         private Label label3;
-        private Label label2;
         private DateTimePicker dateTimePickerLapHD;
-        private TextBox textBoxMaHD;
         private DataGridView dataGridViewDichVu;
         private DataGridView dataGridViewThucDon;
         private Label label11;
@@ -36,7 +34,6 @@ namespace QL_TiecCuoi
         private Label label7;
         private Label label6;
         private Label label5;
-        private TextBox textBoxPhieuDT;
         private GroupBox groupBox5;
         private Panel panel4;
         private RadioButton radioButtonKhong;
@@ -64,12 +61,14 @@ namespace QL_TiecCuoi
         private TextBox textBoxTenKH;
         private TextBox textBoxNguoiLap;
         private Button button1;
-        private Label label13;
         private TextBox textBoxNgayToChuc;
         private TextBox textBoxNgayLap;
         private Label label4;
         private TextBox textBoxPhat;
         private Panel panel1;
+        private Label label13;
+        private TextBox textBoxPhieuDT;
+        private DataRow dataHoaDonCurrent;
 
         public LapHoaDon()
         {
@@ -87,9 +86,10 @@ namespace QL_TiecCuoi
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LapHoaDon));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBoxPhat = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBoxConLai = new System.Windows.Forms.TextBox();
             this.textBoxTienCoc = new System.Windows.Forms.TextBox();
             this.textBoxTongHoaDon = new System.Windows.Forms.TextBox();
@@ -132,15 +132,12 @@ namespace QL_TiecCuoi
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxPhieuDT = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePickerLapHD = new System.Windows.Forms.DateTimePicker();
-            this.textBoxMaHD = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBoxPhat = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxPhieuDT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -180,17 +177,6 @@ namespace QL_TiecCuoi
             this.button1.Text = "Xem Thông Tin Hợp Đồng";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label13.Location = new System.Drawing.Point(231, 101);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 16);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "Mã phiếu đặt tiệc";
             // 
             // groupBox5
             // 
@@ -232,6 +218,24 @@ namespace QL_TiecCuoi
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(441, 232);
             this.panel4.TabIndex = 5;
+            // 
+            // textBoxPhat
+            // 
+            this.textBoxPhat.Location = new System.Drawing.Point(290, 34);
+            this.textBoxPhat.Name = "textBoxPhat";
+            this.textBoxPhat.Size = new System.Drawing.Size(138, 22);
+            this.textBoxPhat.TabIndex = 35;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label4.Location = new System.Drawing.Point(287, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 16);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Tỉ số phạt";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBoxConLai
             // 
@@ -409,7 +413,7 @@ namespace QL_TiecCuoi
             // buttonInHD
             // 
             this.buttonInHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInHD.Location = new System.Drawing.Point(612, 539);
+            this.buttonInHD.Location = new System.Drawing.Point(592, 539);
             this.buttonInHD.Name = "buttonInHD";
             this.buttonInHD.Size = new System.Drawing.Size(90, 26);
             this.buttonInHD.TabIndex = 9;
@@ -434,8 +438,9 @@ namespace QL_TiecCuoi
             this.buttonXem.Name = "buttonXem";
             this.buttonXem.Size = new System.Drawing.Size(80, 26);
             this.buttonXem.TabIndex = 7;
-            this.buttonXem.Text = "Xem";
+            this.buttonXem.Text = "Lưu";
             this.buttonXem.UseVisualStyleBackColor = true;
+            this.buttonXem.Click += new System.EventHandler(this.buttonXem_Click);
             // 
             // groupBox2
             // 
@@ -632,19 +637,10 @@ namespace QL_TiecCuoi
             this.label5.TabIndex = 1;
             this.label5.Text = "Ngày đặt tiệc";
             // 
-            // textBoxPhieuDT
-            // 
-            this.textBoxPhieuDT.Location = new System.Drawing.Point(355, 97);
-            this.textBoxPhieuDT.Name = "textBoxPhieuDT";
-            this.textBoxPhieuDT.Size = new System.Drawing.Size(163, 20);
-            this.textBoxPhieuDT.TabIndex = 4;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dateTimePickerLapHD);
-            this.panel2.Controls.Add(this.textBoxMaHD);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(11, 35);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(936, 42);
@@ -657,13 +653,6 @@ namespace QL_TiecCuoi
             this.dateTimePickerLapHD.Size = new System.Drawing.Size(208, 20);
             this.dateTimePickerLapHD.TabIndex = 3;
             // 
-            // textBoxMaHD
-            // 
-            this.textBoxMaHD.Location = new System.Drawing.Point(344, 10);
-            this.textBoxMaHD.Name = "textBoxMaHD";
-            this.textBoxMaHD.Size = new System.Drawing.Size(100, 20);
-            this.textBoxMaHD.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -673,16 +662,6 @@ namespace QL_TiecCuoi
             this.label3.Size = new System.Drawing.Size(115, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "Ngày lập hóa đơn";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(259, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 16);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Mã hóa đơn";
             // 
             // label1
             // 
@@ -695,23 +674,23 @@ namespace QL_TiecCuoi
             this.label1.TabIndex = 0;
             this.label1.Text = "Lập Hóa Đơn Thanh Toán";
             // 
-            // label4
+            // label13
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label4.Location = new System.Drawing.Point(287, 5);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 16);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Tỉ số phạt";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label13.Location = new System.Drawing.Point(231, 101);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 16);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "Mã phiếu đặt tiệc";
             // 
-            // textBoxPhat
+            // textBoxPhieuDT
             // 
-            this.textBoxPhat.Location = new System.Drawing.Point(290, 34);
-            this.textBoxPhat.Name = "textBoxPhat";
-            this.textBoxPhat.Size = new System.Drawing.Size(138, 22);
-            this.textBoxPhat.TabIndex = 35;
+            this.textBoxPhieuDT.Location = new System.Drawing.Point(355, 97);
+            this.textBoxPhieuDT.Name = "textBoxPhieuDT";
+            this.textBoxPhieuDT.Size = new System.Drawing.Size(163, 20);
+            this.textBoxPhieuDT.TabIndex = 4;
             // 
             // LapHoaDon
             // 
@@ -763,6 +742,8 @@ namespace QL_TiecCuoi
             DataProvider provider = new DataProvider();
             DataTable data = provider.ExecuteQuery(query);
             DataRow dataRow = data.Rows[0];
+            this.dataHoaDonCurrent = dataRow;
+            
             textBoxNguoiLap.Text = dataRow["TenNhanVien"].ToString();
             textBoxNgayLap.Text = dataRow["NgayLap"].ToString();
             textBoxNgayToChuc.Text = dataRow["NgayToChuc"].ToString();
@@ -850,6 +831,36 @@ namespace QL_TiecCuoi
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonXem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                DataProvider provider = new DataProvider();
+                Console.WriteLine(this.dataHoaDonCurrent["id"].ToString());
+                string query1 = "Insert into HoaDon( IdMaDatTiec, IDThongTinKhachHang ,IdLoaiSanh ,IdDichVu,IdThucDon, TienPhat,TongTienHoaDon,TienCoc ,TienConLai) Values("
+                    + this.dataHoaDonCurrent["id"] + " , "
+                    + this.dataHoaDonCurrent["IDThongTinKhachHang"] + " , "
+                    + this.dataHoaDonCurrent["IdLoaiSanh"] + " , "
+                    + this.dataHoaDonCurrent["IdDichVu"] + " , "
+                    + this.dataHoaDonCurrent["IdThucDon"] + " , '"
+
+                    + textBoxTienPhat.Text + "' , '"
+                    + textBoxTongHoaDon.Text + "' , '"
+                    + textBoxTienCoc.Text + "' , '"
+                    + textBoxConLai.Text + "')";
+                 provider.ExecuteWrite(query1);
+                
+          
+                MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+            }
+           
+            catch
+            {
+                MessageBox.Show("Lỗi, không lưu được");
+            }
         }
     }
 

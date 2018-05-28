@@ -69,8 +69,8 @@ namespace QL_TiecCuoi
    
             string TenDangNhap = textBoxTenDangNhap.Text;
             string MatKhau = textBoxMatKhau.Text;
-            //if (_DangNhap(TenDangNhap, MatKhau))
-            if (true)
+            if (_DangNhap(TenDangNhap, MatKhau))
+            //if (true)
             {
                 this.Hide();
                 Form frm = new Menu();

@@ -36,14 +36,25 @@ namespace QL_TiecCuoi
             try
             {
                 DataProvider provider = new DataProvider();
-                int CurrentIndex = dataGridViewDSHoaDon.CurrentCell.RowIndex;
-                string a = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[0].Value.ToString());
-                string deletedStr = "Delete from HoaDon where LoaiSanh='" + a + "'";
-                provider.ExecuteDelete(deletedStr);
+                int CurrentIndex = dataGridViewTraCuuHoaDon.CurrentCell.RowIndex;
+                string a = Convert.ToString(dataGridViewTraCuuHoaDon.Rows[CurrentIndex].Cells[0].Value.ToString());
+                string deletedStr1 = "Delete from ThongTinDatTiec where ThongTinDatTiec.id='" + a + "'";
+                provider.ExecuteDelete(deletedStr1);
+                string deletedStr2 = "Delete from ThongTinKhachHang where ThongTinKhachHang.id='" + a + "'";
+                Console.Write(deletedStr1);
+                Console.Write(deletedStr1);
+                provider.ExecuteDelete(deletedStr2);
+                string deletedStr3 = "Delete from HoaDon where HoaDon.id='" + a + "'";
+                provider.ExecuteDelete(deletedStr3);
                 DataSet ds = new DataSet();
                 SqlDataAdapter da = new SqlDataAdapter();
-                string query = "select * from HoaDon";
-                dataGridViewDSHoaDon.DataSource = provider.ExecuteQuery(query);
+                /*string query = @"Select h.id, h.MaHoaDon,t.MaDatTiec,p.MaKhachhang, p.TenKhachHang, s.DonGiaToiThieu as TienSanh, dv.GiaDichVu, td.GiaThucDon, h.TienPhat, h.TienCoc, h.TongTienHoaDon ,h.TienConLai
+              from HoaDon h left join ThongTinKhachHang p on p.id = h.IDThongTinKhachHang
+              left join ThongTinDatTiec t on t.id = h.IdMaDatTiec
+              left join ThongTinSanh s on s.id = h.IdLoaiSanh
+              left join DichVu dv on dv.id = h.IdDichVu
+              left join ThucDon td on td.id = h.IdThucDon";
+                dataGridViewTraCuuHoaDon.DataSource = provider.ExecuteQuery(query);*/
                 MessageBox.Show("Bạn đã xóa thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
 
             }
@@ -53,51 +64,7 @@ namespace QL_TiecCuoi
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-             try
-            {
-                DataProvider provider = new DataProvider();
-                int CurrentIndex = dataGridViewDSHoaDon.CurrentCell.RowIndex;
-                string maHoaDon = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[0].Value.ToString());
-                string maKhachHang = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[1].Value.ToString());
-                string maDatTiec = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[2].Value.ToString());
-                string thucDon = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[3].Value.ToString());
-                string dichVu = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[4].Value.ToString());
-                string tienThucDon = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[5].Value.ToString());
-                string tienDichVu = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[6].Value.ToString());
-                string tienPhat = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[7].Value.ToString());
-                string tongTienHoaDon = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[8].Value.ToString());
-                string tienCoc = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[9].Value.ToString());
-                string tienConLai = Convert.ToString(dataGridViewDSHoaDon.Rows[CurrentIndex].Cells[10].Value.ToString());
-
-
-                string updateStr = "Update HoaDon set MaHoaDon='"+ maHoaDon+"', MaKhachHang='" 
-                    + maKhachHang + "',MaDatTiec='" 
-                    + maDatTiec + "',ThucDon='" 
-                    + thucDon + "',GhiChu='"
-                    + dichVu + "',DichVu = '"
-                    + tienThucDon + "', TienThucDon='"
-                    + tienDichVu + "', TienDichVu='"
-                    + tienPhat + "',TongTienHoaDon='"
-                    + tongTienHoaDon + "',TienCoc='"
-                    + tienCoc + "',TienConLai='"
-                    + tienConLai + "'";
-
-                Console.Write(updateStr);
-                provider.ExecuteUpdate(updateStr);
-                
-                string query = "select * from HoaDon";
-                dataGridViewDSHoaDon.DataSource = provider.ExecuteQuery(query);
-                MessageBox.Show("Bạn đã sửa thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
-
-            }
-            catch
-            {
-                MessageBox.Show("Lỗi, không sửa được");
-            }
-        }
-
+       
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
          
@@ -112,20 +79,41 @@ namespace QL_TiecCuoi
         {
             string valueFilter = textBoxTimHoaDon.Text.ToString().Trim();
             string fieldFilter = "MaKhachHang";
-            if (radioButtonMaHD.Checked) {
+            if (radioButtonMaHD.Checked)
+            {
                 fieldFilter = "MaHoaDon";
             }
-            string query = "select * from HoaDon where " + fieldFilter + " like '%" + valueFilter + "%'";
+
+            string query1 = @"Select h.id, h.MaHoaDon,t.MaDatTiec,p.MaKhachhang, p.TenKhachHang, s.DonGiaToiThieu as TienSanh, dv.GiaDichVu, td.GiaThucDon, h.TienPhat, h.TienCoc, h.TongTienHoaDon ,h.TienConLai
+              from HoaDon h
+              left join ThongTinKhachHang p on p.id = h.IDThongTinKhachHang
+              left join ThongTinDatTiec t on t.id = h.IdMaDatTiec
+              left join ThongTinSanh s on s.id = h.IdLoaiSanh
+              left join DichVu dv on dv.id = h.IdDichVu
+              left join ThucDon td on td.id = h.IdThucDon where " + fieldFilter + " like '%" + valueFilter + "%'";
+            Console.Write(query1);
             DataProvider provider = new DataProvider();
-            dataGridViewDSHoaDon.DataSource = provider.ExecuteQuery(query);
+            dataGridViewTraCuuHoaDon.DataSource = provider.ExecuteQuery(query1);
 
         }
 
         private void buttonXem_Click(object sender, EventArgs e)
         {
-            string query = "select *  from ThongTinkhachHang inner join ThongTinDatTiec1 on ThongTinKhachHang.MaKhachHang = ThongTinDatTiec1.MaKhachHang";
+            string query = @"Select h.id, h.MaHoaDon,t.MaDatTiec,p.MaKhachhang, p.TenKhachHang, s.DonGiaToiThieu as TienSanh, dv.GiaDichVu, td.GiaThucDon, h.TienPhat, h.TienCoc, h.TongTienHoaDon ,h.TienConLai
+              from HoaDon h
+              left join ThongTinKhachHang p on p.id = h.IDThongTinKhachHang
+              left join ThongTinDatTiec t on t.id = h.IdMaDatTiec
+              left join ThongTinSanh s on s.id = h.IdLoaiSanh
+              left join DichVu dv on dv.id = h.IdDichVu
+              left join ThucDon td on td.id = h.IdThucDon";
             DataProvider provider = new DataProvider();
-            dataGridViewDSHoaDon.DataSource = provider.ExecuteQuery(query);
+            dataGridViewTraCuuHoaDon.DataSource = provider.ExecuteQuery(query);
+
+        }
+
+        private void buttonSua_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

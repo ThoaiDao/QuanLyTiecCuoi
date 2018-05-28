@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NhanVien));
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBoxCa = new System.Windows.Forms.ComboBox();
@@ -39,7 +38,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxTenNhanVien = new System.Windows.Forms.TextBox();
             this.textBoxSoDienThoai = new System.Windows.Forms.TextBox();
-            this.textBoxMaNhanVien = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,19 +58,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Mã Nhân Viên:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(326, 16);
+            this.label3.Location = new System.Drawing.Point(22, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 16);
             this.label3.TabIndex = 2;
@@ -87,12 +76,10 @@
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.textBoxTenNhanVien);
             this.panel1.Controls.Add(this.textBoxSoDienThoai);
-            this.panel1.Controls.Add(this.textBoxMaNhanVien);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.panel1.Location = new System.Drawing.Point(15, 19);
@@ -103,7 +90,7 @@
             // comboBoxCa
             // 
             this.comboBoxCa.FormattingEnabled = true;
-            this.comboBoxCa.Location = new System.Drawing.Point(409, 118);
+            this.comboBoxCa.Location = new System.Drawing.Point(409, 95);
             this.comboBoxCa.Name = "comboBoxCa";
             this.comboBoxCa.Size = new System.Drawing.Size(150, 24);
             this.comboBoxCa.TabIndex = 28;
@@ -111,7 +98,7 @@
             // comboBoxChucVu
             // 
             this.comboBoxChucVu.FormattingEnabled = true;
-            this.comboBoxChucVu.Location = new System.Drawing.Point(409, 84);
+            this.comboBoxChucVu.Location = new System.Drawing.Point(409, 57);
             this.comboBoxChucVu.Name = "comboBoxChucVu";
             this.comboBoxChucVu.Size = new System.Drawing.Size(150, 24);
             this.comboBoxChucVu.TabIndex = 27;
@@ -119,14 +106,14 @@
             // comboBoxSanh
             // 
             this.comboBoxSanh.FormattingEnabled = true;
-            this.comboBoxSanh.Location = new System.Drawing.Point(409, 49);
+            this.comboBoxSanh.Location = new System.Drawing.Point(409, 16);
             this.comboBoxSanh.Name = "comboBoxSanh";
             this.comboBoxSanh.Size = new System.Drawing.Size(150, 24);
             this.comboBoxSanh.TabIndex = 26;
             // 
             // textBoxDiaChi
             // 
-            this.textBoxDiaChi.Location = new System.Drawing.Point(409, 13);
+            this.textBoxDiaChi.Location = new System.Drawing.Point(144, 89);
             this.textBoxDiaChi.Name = "textBoxDiaChi";
             this.textBoxDiaChi.Size = new System.Drawing.Size(150, 22);
             this.textBoxDiaChi.TabIndex = 25;
@@ -134,7 +121,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(326, 121);
+            this.label8.Location = new System.Drawing.Point(326, 89);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(28, 16);
             this.label8.TabIndex = 25;
@@ -142,7 +129,7 @@
             // 
             // textBoxTenNhanVien
             // 
-            this.textBoxTenNhanVien.Location = new System.Drawing.Point(144, 51);
+            this.textBoxTenNhanVien.Location = new System.Drawing.Point(144, 16);
             this.textBoxTenNhanVien.Name = "textBoxTenNhanVien";
             this.textBoxTenNhanVien.Size = new System.Drawing.Size(150, 22);
             this.textBoxTenNhanVien.TabIndex = 23;
@@ -150,22 +137,15 @@
             // 
             // textBoxSoDienThoai
             // 
-            this.textBoxSoDienThoai.Location = new System.Drawing.Point(144, 86);
+            this.textBoxSoDienThoai.Location = new System.Drawing.Point(144, 51);
             this.textBoxSoDienThoai.Name = "textBoxSoDienThoai";
             this.textBoxSoDienThoai.Size = new System.Drawing.Size(150, 22);
             this.textBoxSoDienThoai.TabIndex = 24;
             // 
-            // textBoxMaNhanVien
-            // 
-            this.textBoxMaNhanVien.Location = new System.Drawing.Point(144, 13);
-            this.textBoxMaNhanVien.Name = "textBoxMaNhanVien";
-            this.textBoxMaNhanVien.Size = new System.Drawing.Size(150, 22);
-            this.textBoxMaNhanVien.TabIndex = 19;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(326, 89);
+            this.label1.Location = new System.Drawing.Point(326, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 6;
@@ -174,7 +154,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 89);
+            this.label6.Location = new System.Drawing.Point(22, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 16);
             this.label6.TabIndex = 5;
@@ -183,7 +163,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(326, 54);
+            this.label5.Location = new System.Drawing.Point(326, 22);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 16);
             this.label5.TabIndex = 4;
@@ -192,7 +172,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 54);
+            this.label4.Location = new System.Drawing.Point(22, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 16);
             this.label4.TabIndex = 3;
@@ -332,13 +312,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBoxTenNhanVien;
         private System.Windows.Forms.TextBox textBoxSoDienThoai;
-        private System.Windows.Forms.TextBox textBoxMaNhanVien;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

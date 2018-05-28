@@ -39,12 +39,11 @@ namespace QL_TiecCuoi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn đã tính tiền thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1) == DialogResult.OK)
-            {
+           
                 this.Hide();
-                Form frm = new LapHopDong();
+                Form frm = new LapHoaDon();
                 frm.ShowDialog();
-            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
