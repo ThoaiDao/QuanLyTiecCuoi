@@ -1,5 +1,0 @@
-C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\DTO\bin\Debug\DTO.dll
-C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\DTO\bin\Debug\DTO.pdb
-C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
-C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\DTO\obj\Debug\DTO.dll
-C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\DTO\obj\Debug\DTO.pdb
