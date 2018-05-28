@@ -29,8 +29,6 @@ namespace QL_TiecCuoi
         private void button1_Click(object sender, EventArgs e)
         {
            
-
-
             string valueFilter = textBoxHopDong.Text.ToString().Trim();
             string fieldFilter = "ThongTinKhachHang.MaKhachHang";
             if (radioButtonMaDatTiec.Checked)
@@ -86,17 +84,17 @@ namespace QL_TiecCuoi
                 string dienthoai = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[7].Value.ToString().Trim());
                 string email = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[8].Value.ToString().Trim());
                 string ngaytochuc = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[9].Value.ToString().Trim());
-                
-               
-                string ID = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[10].Value.ToString().Trim());
-                string madattiec = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[11].Value.ToString().Trim().Trim());
-                string loaisanh = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[12].Value.ToString().Trim());
-                string madichvu = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[13].Value.ToString().Trim());
-                string mathucdon = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[14].Value.ToString().Trim());  
-                string soluongnhanvien = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[15].Value.ToString().Trim());
-                string soluongban = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[16].Value.ToString().Trim());
-                string trangthai = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[17].Value.ToString().Trim());
-                string ca = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[18].Value.ToString().Trim());
+                string tiencoc = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[10].Value.ToString().Trim());
+
+                string ID = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[11].Value.ToString().Trim());
+                string madattiec = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[12].Value.ToString().Trim().Trim());
+                string loaisanh = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[13].Value.ToString().Trim());
+                string madichvu = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[14].Value.ToString().Trim());
+                string mathucdon = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[15].Value.ToString().Trim());  
+                string soluongnhanvien = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[16].Value.ToString().Trim());
+                string soluongban = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[17].Value.ToString().Trim());
+                string trangthai = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[18].Value.ToString().Trim());
+                string ca = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[19].Value.ToString().Trim());
                
 
                 string updateStr1 = "Update ThongTinKhachHang set NgayLap='"
@@ -107,7 +105,8 @@ namespace QL_TiecCuoi
                    + diachi + "',DienThoai='"
                    + dienthoai + "', Email='"
                    + email + "', NgayToChuc='"
-                   + ngaytochuc + "' where id = '" + id + "'";
+                   + ngaytochuc + "', TienCoc='"
+                   + tiencoc+"'where id = '" + id + "'";
                 provider.ExecuteUpdate(updateStr1);
 
                 string updateStr2 = "Update ThongTinDatTiec set LoaiSanh='"

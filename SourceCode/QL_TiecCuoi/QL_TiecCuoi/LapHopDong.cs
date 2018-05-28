@@ -65,7 +65,7 @@ namespace QL_TiecCuoi
                    
                     DataProvider provider = new DataProvider();
                     string formatDate = "MM/dd/yyyy";
-                    string query1 = "Insert into ThongTinKhachHang ( NgayLap, TenKhachHang, TenChuRe, TenCoDau, DiaChi, DienThoai,EMail, NgayToChuc) Values('" 
+                    string query1 = "Insert into ThongTinKhachHang ( NgayLap, TenKhachHang, TenChuRe, TenCoDau, DiaChi, DienThoai,EMail, NgayToChuc, TienCoc) Values('" 
                         //+ textBoxMaKhachHang.Text = KH.TangMaKhachHang(query) + "' , '"
                         + dateTimePickerNgayLap.Value.ToString(formatDate) + "' , '"
                         + textBoxTenKhachHang.Text + "' , '"
@@ -74,7 +74,8 @@ namespace QL_TiecCuoi
                         + textBoxDiaChi.Text + "' , '" 
                         + textBoxDienThoai.Text + "', '" 
                         + textBoxEmail.Text + "', '"   
-                        + dateTimePickerNgayToChuc.Value.ToString(formatDate) + "')";
+                        + dateTimePickerNgayToChuc.Value.ToString(formatDate) + "', '"
+                        + textBoxTienCoc.Text + "')";
                 int IdThongTinKhachHang = provider.ExecuteWrite(query1);
                 string query2 = "Insert into ThongTinDatTiec (IDNhanVien,IDThongTinKhachHang,IdLoaiSanh,IdDichVu,IdThucDon,SoLuongNhanVien, SoLuongBan,TrangThai,Ca) Values("
                         + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + ","
@@ -174,6 +175,11 @@ namespace QL_TiecCuoi
         }
 
         private void comboBoxDichVu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
         {
 
         }

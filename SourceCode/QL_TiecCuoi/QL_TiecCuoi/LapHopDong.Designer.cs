@@ -49,7 +49,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxTenNhanVien = new System.Windows.Forms.ComboBox();
             this.textBoxMaDatTiec = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.comboBoxCa = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -70,14 +72,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxTenNhanVien = new System.Windows.Forms.ComboBox();
+            this.labelTienCoc = new System.Windows.Forms.Label();
+            this.textBoxTienCoc = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxTienCoc);
+            this.groupBox1.Controls.Add(this.labelTienCoc);
             this.groupBox1.Controls.Add(this.dateTimePickerNgayToChuc);
             this.groupBox1.Controls.Add(this.textBoxEmail);
             this.groupBox1.Controls.Add(this.textBoxDienThoai);
@@ -288,12 +292,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin đặt tiệc";
             // 
+            // comboBoxTenNhanVien
+            // 
+            this.comboBoxTenNhanVien.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBoxTenNhanVien.FormattingEnabled = true;
+            this.comboBoxTenNhanVien.Location = new System.Drawing.Point(157, 27);
+            this.comboBoxTenNhanVien.Name = "comboBoxTenNhanVien";
+            this.comboBoxTenNhanVien.Size = new System.Drawing.Size(185, 24);
+            this.comboBoxTenNhanVien.TabIndex = 10;
+            this.comboBoxTenNhanVien.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenNhanVien_SelectedIndexChanged);
+            // 
             // textBoxMaDatTiec
             // 
             this.textBoxMaDatTiec.Location = new System.Drawing.Point(157, 59);
             this.textBoxMaDatTiec.Name = "textBoxMaDatTiec";
             this.textBoxMaDatTiec.Size = new System.Drawing.Size(185, 22);
             this.textBoxMaDatTiec.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(22, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Tên nhân viên";
             // 
             // label19
             // 
@@ -482,26 +507,23 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label2
+            // labelTienCoc
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(22, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 16);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Tên nhân viên";
+            this.labelTienCoc.AutoSize = true;
+            this.labelTienCoc.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.labelTienCoc.Location = new System.Drawing.Point(12, 361);
+            this.labelTienCoc.Name = "labelTienCoc";
+            this.labelTienCoc.Size = new System.Drawing.Size(77, 16);
+            this.labelTienCoc.TabIndex = 27;
+            this.labelTienCoc.Text = "Đặt tiền cọc";
+            this.labelTienCoc.Click += new System.EventHandler(this.label20_Click);
             // 
-            // comboBoxTenNhanVien
+            // textBoxTienCoc
             // 
-            this.comboBoxTenNhanVien.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBoxTenNhanVien.FormattingEnabled = true;
-            this.comboBoxTenNhanVien.Location = new System.Drawing.Point(157, 27);
-            this.comboBoxTenNhanVien.Name = "comboBoxTenNhanVien";
-            this.comboBoxTenNhanVien.Size = new System.Drawing.Size(185, 24);
-            this.comboBoxTenNhanVien.TabIndex = 10;
-            this.comboBoxTenNhanVien.SelectedIndexChanged += new System.EventHandler(this.comboBoxTenNhanVien_SelectedIndexChanged);
+            this.textBoxTienCoc.Location = new System.Drawing.Point(128, 363);
+            this.textBoxTienCoc.Name = "textBoxTienCoc";
+            this.textBoxTienCoc.Size = new System.Drawing.Size(225, 22);
+            this.textBoxTienCoc.TabIndex = 28;
             // 
             // LapHopDong
             // 
@@ -575,5 +597,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBoxMaDatTiec;
+        private System.Windows.Forms.Label labelTienCoc;
+        private System.Windows.Forms.TextBox textBoxTienCoc;
     }
 }

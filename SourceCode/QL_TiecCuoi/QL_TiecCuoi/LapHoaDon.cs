@@ -45,10 +45,10 @@ namespace QL_TiecCuoi
         private Label label24;
         private Label label23;
         private Label label22;
-        private Label label21;
+        private Label labelTongTien;
         private Label label20;
         private Label label19;
-        private Label label18;
+        private Label labelDichVu;
         private Label label17;
         private Label label12;
         private TextBox textBoxConLai;
@@ -67,15 +67,17 @@ namespace QL_TiecCuoi
         private Label label13;
         private TextBox textBoxNgayToChuc;
         private TextBox textBoxNgayLap;
+        private Label label4;
+        private TextBox textBoxPhat;
         private Panel panel1;
 
         public LapHoaDon()
         {
             InitializeComponent();
-           
+
         }
 
-      
+
 
 
 
@@ -102,10 +104,10 @@ namespace QL_TiecCuoi
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.labelTongTien = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.labelDichVu = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.buttonInHD = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -116,6 +118,8 @@ namespace QL_TiecCuoi
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridViewThucDon = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxNgayToChuc = new System.Windows.Forms.TextBox();
+            this.textBoxNgayLap = new System.Windows.Forms.TextBox();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxDienThoai = new System.Windows.Forms.TextBox();
             this.textBoxDicChiKH = new System.Windows.Forms.TextBox();
@@ -135,8 +139,8 @@ namespace QL_TiecCuoi
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxNgayLap = new System.Windows.Forms.TextBox();
-            this.textBoxNgayToChuc = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxPhat = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -202,6 +206,8 @@ namespace QL_TiecCuoi
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.textBoxPhat);
+            this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.textBoxConLai);
             this.panel4.Controls.Add(this.textBoxTienCoc);
             this.panel4.Controls.Add(this.textBoxTongHoaDon);
@@ -216,10 +222,10 @@ namespace QL_TiecCuoi
             this.panel4.Controls.Add(this.label24);
             this.panel4.Controls.Add(this.label23);
             this.panel4.Controls.Add(this.label22);
-            this.panel4.Controls.Add(this.label21);
+            this.panel4.Controls.Add(this.labelTongTien);
             this.panel4.Controls.Add(this.label20);
             this.panel4.Controls.Add(this.label19);
-            this.panel4.Controls.Add(this.label18);
+            this.panel4.Controls.Add(this.labelDichVu);
             this.panel4.Controls.Add(this.label17);
             this.panel4.ForeColor = System.Drawing.SystemColors.InfoText;
             this.panel4.Location = new System.Drawing.Point(15, 13);
@@ -289,31 +295,33 @@ namespace QL_TiecCuoi
             // 
             this.radioButtonKhong.AutoSize = true;
             this.radioButtonKhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonKhong.Location = new System.Drawing.Point(358, 43);
+            this.radioButtonKhong.Location = new System.Drawing.Point(290, 97);
             this.radioButtonKhong.Name = "radioButtonKhong";
             this.radioButtonKhong.Size = new System.Drawing.Size(64, 20);
             this.radioButtonKhong.TabIndex = 20;
             this.radioButtonKhong.TabStop = true;
             this.radioButtonKhong.Text = "Không";
             this.radioButtonKhong.UseVisualStyleBackColor = true;
+            this.radioButtonKhong.CheckedChanged += new System.EventHandler(this.radioButtonKhong_CheckedChanged);
             // 
             // radioButtonCo
             // 
             this.radioButtonCo.AutoSize = true;
             this.radioButtonCo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonCo.Location = new System.Drawing.Point(298, 43);
+            this.radioButtonCo.Location = new System.Drawing.Point(365, 97);
             this.radioButtonCo.Name = "radioButtonCo";
             this.radioButtonCo.Size = new System.Drawing.Size(46, 20);
             this.radioButtonCo.TabIndex = 19;
             this.radioButtonCo.TabStop = true;
             this.radioButtonCo.Text = "Có ";
             this.radioButtonCo.UseVisualStyleBackColor = true;
+            this.radioButtonCo.CheckedChanged += new System.EventHandler(this.radioButtonCo_CheckedChanged);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(295, 16);
+            this.label25.Location = new System.Drawing.Point(287, 73);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(140, 16);
             this.label25.TabIndex = 18;
@@ -348,15 +356,15 @@ namespace QL_TiecCuoi
             this.label22.TabIndex = 9;
             this.label22.Text = "Tiền cọc:";
             // 
-            // label21
+            // labelTongTien
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(5, 141);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(119, 16);
-            this.label21.TabIndex = 8;
-            this.label21.Text = "Tổng tiền hóa đơn:";
+            this.labelTongTien.AutoSize = true;
+            this.labelTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTongTien.Location = new System.Drawing.Point(5, 141);
+            this.labelTongTien.Name = "labelTongTien";
+            this.labelTongTien.Size = new System.Drawing.Size(119, 16);
+            this.labelTongTien.TabIndex = 8;
+            this.labelTongTien.Text = "Tổng tiền hóa đơn:";
             // 
             // label20
             // 
@@ -378,15 +386,15 @@ namespace QL_TiecCuoi
             this.label19.TabIndex = 6;
             this.label19.Text = "Tiền phạt:";
             // 
-            // label18
+            // labelDichVu
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(3, 40);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(83, 16);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "Tiền dịch vụ:";
+            this.labelDichVu.AutoSize = true;
+            this.labelDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDichVu.Location = new System.Drawing.Point(3, 40);
+            this.labelDichVu.Name = "labelDichVu";
+            this.labelDichVu.Size = new System.Drawing.Size(83, 16);
+            this.labelDichVu.TabIndex = 5;
+            this.labelDichVu.Text = "Tiền dịch vụ:";
             // 
             // label17
             // 
@@ -504,6 +512,20 @@ namespace QL_TiecCuoi
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hợp đồng đặt tiệc";
+            // 
+            // textBoxNgayToChuc
+            // 
+            this.textBoxNgayToChuc.Location = new System.Drawing.Point(150, 98);
+            this.textBoxNgayToChuc.Name = "textBoxNgayToChuc";
+            this.textBoxNgayToChuc.Size = new System.Drawing.Size(163, 22);
+            this.textBoxNgayToChuc.TabIndex = 20;
+            // 
+            // textBoxNgayLap
+            // 
+            this.textBoxNgayLap.Location = new System.Drawing.Point(150, 61);
+            this.textBoxNgayLap.Name = "textBoxNgayLap";
+            this.textBoxNgayLap.Size = new System.Drawing.Size(163, 22);
+            this.textBoxNgayLap.TabIndex = 19;
             // 
             // textBoxEmail
             // 
@@ -673,19 +695,23 @@ namespace QL_TiecCuoi
             this.label1.TabIndex = 0;
             this.label1.Text = "Lập Hóa Đơn Thanh Toán";
             // 
-            // textBoxNgayLap
+            // label4
             // 
-            this.textBoxNgayLap.Location = new System.Drawing.Point(150, 61);
-            this.textBoxNgayLap.Name = "textBoxNgayLap";
-            this.textBoxNgayLap.Size = new System.Drawing.Size(163, 22);
-            this.textBoxNgayLap.TabIndex = 19;
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label4.Location = new System.Drawing.Point(287, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 16);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Tỉ số phạt";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBoxNgayToChuc
+            // textBoxPhat
             // 
-            this.textBoxNgayToChuc.Location = new System.Drawing.Point(150, 98);
-            this.textBoxNgayToChuc.Name = "textBoxNgayToChuc";
-            this.textBoxNgayToChuc.Size = new System.Drawing.Size(163, 22);
-            this.textBoxNgayToChuc.TabIndex = 20;
+            this.textBoxPhat.Location = new System.Drawing.Point(290, 34);
+            this.textBoxPhat.Name = "textBoxPhat";
+            this.textBoxPhat.Size = new System.Drawing.Size(138, 22);
+            this.textBoxPhat.TabIndex = 35;
             // 
             // LapHoaDon
             // 
@@ -714,7 +740,7 @@ namespace QL_TiecCuoi
 
         }
 
-        
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -725,8 +751,8 @@ namespace QL_TiecCuoi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            string query = @"Select a.*,p.NgayToChuc,p.NgayLap,p.Email,p.TenKhachHang,p.DiaChi,p.DienThoai,NhanVienTiepTan.TenNhanVien,c.*,d.*, e.DonGiaToiThieu
+
+            string query = @"Select a.*,p.NgayToChuc,p.NgayLap,p.Email,p.TenKhachHang,p.DiaChi,p.DienThoai,p.TienCoc, NhanVienTiepTan.TenNhanVien,c.*,d.*, e.DonGiaToiThieu, e.TiSoPhat
             from ThongTinDatTiec a
             left join ThongTinKhachHang p on p.id = a.IDThongTinKhachHang
             left join NhanVienTiepTan on NhanVienTiepTan.id = a.IDNhanVien
@@ -744,27 +770,89 @@ namespace QL_TiecCuoi
             textBoxDicChiKH.Text = dataRow["DiaChi"].ToString();
             textBoxDienThoai.Text = dataRow["DienThoai"].ToString();
             textBoxEmail.Text = dataRow["Email"].ToString();
-            string query1 = "select d.* from ThongTinDatTiec a left join ThucDon d on d.id = a.IdThucDon where MaDatTiec = '"+ textBoxPhieuDT.Text + "'";
+            string query1 = "select d.* from ThongTinDatTiec a left join ThucDon d on d.id = a.IdThucDon where MaDatTiec = '" + textBoxPhieuDT.Text + "'";
             dataGridViewThucDon.DataSource = provider.ExecuteQuery(query1);
             string query2 = "select c.* from ThongTinDatTiec a left join DichVu c on c.id = a.IdThucDon where MaDatTiec = '" + textBoxPhieuDT.Text + "'";
             dataGridViewDichVu.DataSource = provider.ExecuteQuery(query2);
             textBoxTienThucDon.Text = dataRow["GiaThucDon"].ToString();
             textBoxTienDichVu.Text = dataRow["GiaDichVu"].ToString();
             textBoxTienSanh.Text = dataRow["DonGiaToiThieu"].ToString();
-            textBoxTienPhat.Text = dataRow["TienPhat"].ToString();
+            textBoxPhat.Text = dataRow["TiSoPhat"].ToString();
+            textBoxTienCoc.Text = dataRow["TienCoc"].ToString();
 
-
-            string valueFilter = textBoxTienPhat.Text.ToString().Trim();
-            string fieldFilter = "HoaDon.MaHoaDon";
-            if (radioButtonMaDatTiec.Checked)
-            {
-                fieldFilter = "MaKhachHang";
-            }
-            string query1 = "select *  from ThongTinkhachHang inner join ThongTinDatTiec on ThongTinKhachHang.id = ThongTinDatTiec.id where " + fieldFilter + " like '%" + valueFilter + "%'";
-            Console.Write(query1);
-            DataProvider provider = new DataProvider();
-            dataGridViewTraCuuHopDong.DataSource = provider.ExecuteQuery(query1);
         }
 
+
+        private void radioButtonKhong_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (radioButtonKhong.Checked)
+            {
+                double i = 0;
+                textBoxTienPhat.Text = i.ToString();
+                double a1, b1, c1, d1;
+                bool isAValid = double.TryParse(textBoxTienSanh.Text.Trim(), out a1);
+                bool isBValid = double.TryParse(textBoxTienPhat.Text.Trim(), out b1);
+                bool isCValid = double.TryParse(textBoxTienThucDon.Text.Trim(), out c1);
+                bool isDValid = double.TryParse(textBoxTienDichVu.Text.Trim(), out d1);
+                if (isAValid && isBValid && isCValid && isDValid)
+                    textBoxTongHoaDon.Text = (a1 + b1 + c1 + d1).ToString();
+
+                else
+                    textBoxTongHoaDon.Text = "Invalid input";
+                double e1, f1;
+                bool isEValid = double.TryParse(textBoxTongHoaDon.Text.Trim(), out e1);
+                bool isFValid = double.TryParse(textBoxTienCoc.Text.Trim(), out f1);
+                if (isEValid && isFValid )
+                    textBoxConLai.Text = (e1 - f1).ToString();
+                else
+                    textBoxConLai.Text = "Invalid input";
+
+            }
+            else
+            {
+                double a, b;
+                bool isAValid = double.TryParse(textBoxTienSanh.Text.Trim(), out a);
+                bool isBValid = double.TryParse(textBoxPhat.Text.Trim(), out b);
+                    if (isAValid && isBValid)
+                    { 
+                        textBoxTienPhat.Text = (a * b).ToString();    
+                    }
+                    else
+                        textBoxTienPhat.Text = "Invalid input";
+                double a2, b2, c2, d2;
+                bool isA2Valid = double.TryParse(textBoxTienSanh.Text.Trim(), out a2);
+                bool isB2Valid = double.TryParse(textBoxTienPhat.Text.Trim(), out b2);
+                bool isC2Valid = double.TryParse(textBoxTienThucDon.Text.Trim(), out c2);
+                bool isD2Valid = double.TryParse(textBoxTienDichVu.Text.Trim(), out d2);
+                if (isA2Valid && isB2Valid && isC2Valid && isD2Valid)
+                    textBoxTongHoaDon.Text = (a2 + b2 + c2 + d2).ToString();
+
+                else
+                    textBoxTongHoaDon.Text = "Invalid input";
+                double e2, f2;
+                bool isEValid = double.TryParse(textBoxTongHoaDon.Text.Trim(), out e2);
+                bool isFValid = double.TryParse(textBoxTienCoc.Text.Trim(), out f2);
+                if (isEValid && isFValid)
+                    textBoxConLai.Text = (e2 - f2).ToString();
+                else
+                    textBoxConLai.Text = "Invalid input";
+            }
+            
+        }
+    
+
+        private void radioButtonCo_CheckedChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }
+
+

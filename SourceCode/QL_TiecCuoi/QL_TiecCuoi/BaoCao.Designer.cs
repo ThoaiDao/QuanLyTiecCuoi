@@ -31,9 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaoCao));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxSLTiec = new System.Windows.Forms.TextBox();
             this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
             this.textBoxMaBaoCao = new System.Windows.Forms.TextBox();
             this.comboBoxMaNguoiLap = new System.Windows.Forms.ComboBox();
+            this.textBoxChucVu = new System.Windows.Forms.TextBox();
+            this.textBoxTenNguoiLap = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,11 +47,6 @@
             this.dataGridViewDSBaoCao = new System.Windows.Forms.DataGridView();
             this.buttonXemBaoCao = new System.Windows.Forms.Button();
             this.buttonThoat = new System.Windows.Forms.Button();
-            this.textBoxSLTiec = new System.Windows.Forms.TextBox();
-            this.textBoxChucVu = new System.Windows.Forms.TextBox();
-            this.textBoxTenNguoiLap = new System.Windows.Forms.TextBox();
-            this.checkBoxBaoCaoThang = new System.Windows.Forms.CheckBox();
-            this.checkBoxBaoCaoNam = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSBaoCao)).BeginInit();
@@ -88,6 +86,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin báo cáo";
             // 
+            // textBoxSLTiec
+            // 
+            this.textBoxSLTiec.Location = new System.Drawing.Point(462, 98);
+            this.textBoxSLTiec.Name = "textBoxSLTiec";
+            this.textBoxSLTiec.Size = new System.Drawing.Size(191, 22);
+            this.textBoxSLTiec.TabIndex = 13;
+            // 
             // dateTimePickerNgayLap
             // 
             this.dateTimePickerNgayLap.Location = new System.Drawing.Point(462, 61);
@@ -110,6 +115,20 @@
             this.comboBoxMaNguoiLap.Size = new System.Drawing.Size(166, 24);
             this.comboBoxMaNguoiLap.TabIndex = 9;
             this.comboBoxMaNguoiLap.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNguoiLap_SelectedIndexChanged);
+            // 
+            // textBoxChucVu
+            // 
+            this.textBoxChucVu.Location = new System.Drawing.Point(154, 100);
+            this.textBoxChucVu.Name = "textBoxChucVu";
+            this.textBoxChucVu.Size = new System.Drawing.Size(166, 22);
+            this.textBoxChucVu.TabIndex = 10;
+            // 
+            // textBoxTenNguoiLap
+            // 
+            this.textBoxTenNguoiLap.Location = new System.Drawing.Point(154, 61);
+            this.textBoxTenNguoiLap.Name = "textBoxTenNguoiLap";
+            this.textBoxTenNguoiLap.Size = new System.Drawing.Size(166, 22);
+            this.textBoxTenNguoiLap.TabIndex = 9;
             // 
             // label7
             // 
@@ -212,56 +231,11 @@
             this.buttonThoat.UseVisualStyleBackColor = true;
             this.buttonThoat.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBoxSLTiec
-            // 
-            this.textBoxSLTiec.Location = new System.Drawing.Point(462, 98);
-            this.textBoxSLTiec.Name = "textBoxSLTiec";
-            this.textBoxSLTiec.Size = new System.Drawing.Size(191, 22);
-            this.textBoxSLTiec.TabIndex = 13;
-            // 
-            // textBoxChucVu
-            // 
-            this.textBoxChucVu.Location = new System.Drawing.Point(154, 100);
-            this.textBoxChucVu.Name = "textBoxChucVu";
-            this.textBoxChucVu.Size = new System.Drawing.Size(166, 22);
-            this.textBoxChucVu.TabIndex = 10;
-            // 
-            // textBoxTenNguoiLap
-            // 
-            this.textBoxTenNguoiLap.Location = new System.Drawing.Point(154, 61);
-            this.textBoxTenNguoiLap.Name = "textBoxTenNguoiLap";
-            this.textBoxTenNguoiLap.Size = new System.Drawing.Size(166, 22);
-            this.textBoxTenNguoiLap.TabIndex = 9;
-            // 
-            // checkBoxBaoCaoThang
-            // 
-            this.checkBoxBaoCaoThang.AutoSize = true;
-            this.checkBoxBaoCaoThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxBaoCaoThang.Location = new System.Drawing.Point(166, 50);
-            this.checkBoxBaoCaoThang.Name = "checkBoxBaoCaoThang";
-            this.checkBoxBaoCaoThang.Size = new System.Drawing.Size(157, 20);
-            this.checkBoxBaoCaoThang.TabIndex = 7;
-            this.checkBoxBaoCaoThang.Text = "Báo Cáo Theo Tháng";
-            this.checkBoxBaoCaoThang.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxBaoCaoNam
-            // 
-            this.checkBoxBaoCaoNam.AutoSize = true;
-            this.checkBoxBaoCaoNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxBaoCaoNam.Location = new System.Drawing.Point(385, 50);
-            this.checkBoxBaoCaoNam.Name = "checkBoxBaoCaoNam";
-            this.checkBoxBaoCaoNam.Size = new System.Drawing.Size(147, 20);
-            this.checkBoxBaoCaoNam.TabIndex = 8;
-            this.checkBoxBaoCaoNam.Text = "Báo Cáo Theo Năm";
-            this.checkBoxBaoCaoNam.UseVisualStyleBackColor = true;
-            // 
             // BaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 509);
-            this.Controls.Add(this.checkBoxBaoCaoNam);
-            this.Controls.Add(this.checkBoxBaoCaoThang);
             this.Controls.Add(this.buttonThoat);
             this.Controls.Add(this.buttonXemBaoCao);
             this.Controls.Add(this.groupBox2);
@@ -301,7 +275,5 @@
         private System.Windows.Forms.TextBox textBoxSLTiec;
         private System.Windows.Forms.TextBox textBoxChucVu;
         private System.Windows.Forms.TextBox textBoxTenNguoiLap;
-        private System.Windows.Forms.CheckBox checkBoxBaoCaoThang;
-        private System.Windows.Forms.CheckBox checkBoxBaoCaoNam;
     }
 }
