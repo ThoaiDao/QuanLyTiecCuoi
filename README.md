@@ -54,7 +54,7 @@ _**Chức năng & Mô tả**_
 >**Sinh viên năm 2 khoa Hệ Thống Thông Tin trường đại học Công Nghệ Thông Tin**
 
 - **Kiến thức :**
-  - Ngôn ngữ lập trình: C++, C# winform
+  - Ngôn ngữ lập trình:  C# winform
   - Công cụ thiết kế: Visio
   - Hệ quản trị cơ sở dữ liệu: Sql server
  
