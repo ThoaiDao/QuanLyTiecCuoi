@@ -32,8 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinSảnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinTiệcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lậpHợpĐồngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lậpHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.traCứuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,9 +81,6 @@
             // thôngTinToolStripMenuItem
             // 
             this.thôngTinToolStripMenuItem.BackColor = System.Drawing.SystemColors.InfoText;
-            this.thôngTinToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thôngTinSảnhToolStripMenuItem,
-            this.thôngTinTiệcToolStripMenuItem});
             this.thôngTinToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thôngTinToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.thôngTinToolStripMenuItem.Name = "thôngTinToolStripMenuItem";
@@ -94,26 +89,6 @@
             this.thôngTinToolStripMenuItem.Text = "Thông tin";
             this.thôngTinToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.thôngTinToolStripMenuItem.Click += new System.EventHandler(this.thôngTinToolStripMenuItem_Click);
-            // 
-            // thôngTinSảnhToolStripMenuItem
-            // 
-            this.thôngTinSảnhToolStripMenuItem.BackColor = System.Drawing.SystemColors.InfoText;
-            this.thôngTinSảnhToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.thôngTinSảnhToolStripMenuItem.Name = "thôngTinSảnhToolStripMenuItem";
-            this.thôngTinSảnhToolStripMenuItem.Padding = new System.Windows.Forms.Padding(7);
-            this.thôngTinSảnhToolStripMenuItem.Size = new System.Drawing.Size(197, 36);
-            this.thôngTinSảnhToolStripMenuItem.Text = "Thông tin sảnh";
-            this.thôngTinSảnhToolStripMenuItem.Click += new System.EventHandler(this.thôngTinSảnhToolStripMenuItem_Click);
-            // 
-            // thôngTinTiệcToolStripMenuItem
-            // 
-            this.thôngTinTiệcToolStripMenuItem.BackColor = System.Drawing.SystemColors.InfoText;
-            this.thôngTinTiệcToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
-            this.thôngTinTiệcToolStripMenuItem.Name = "thôngTinTiệcToolStripMenuItem";
-            this.thôngTinTiệcToolStripMenuItem.Padding = new System.Windows.Forms.Padding(7);
-            this.thôngTinTiệcToolStripMenuItem.Size = new System.Drawing.Size(197, 36);
-            this.thôngTinTiệcToolStripMenuItem.Text = "Thông tin tiệc";
-            this.thôngTinTiệcToolStripMenuItem.Click += new System.EventHandler(this.thôngTinTiệcToolStripMenuItem_Click);
             // 
             // lậpHợpĐồngToolStripMenuItem
             // 
@@ -287,8 +262,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ToolStripMenuItem thôngTinSảnhToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thôngTinTiệcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem hóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hợpĐồngToolStripMenuItem;

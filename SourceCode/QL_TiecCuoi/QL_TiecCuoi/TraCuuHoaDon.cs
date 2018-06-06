@@ -81,7 +81,7 @@ namespace QL_TiecCuoi
             string fieldFilter = "MaKhachHang";
             if (radioButtonMaHD.Checked)
             {
-                fieldFilter = "MaHoaDon";
+                fieldFilter = "TenKhachHang";
             }
 
             string query1 = @"Select h.id, h.MaHoaDon,t.MaDatTiec,p.MaKhachhang, p.TenKhachHang, s.DonGiaToiThieu as TienSanh, dv.GiaDichVu, td.GiaThucDon, h.TienPhat, h.TienCoc, h.TongTienHoaDon ,h.TienConLai

@@ -57,25 +57,16 @@ namespace QL_TiecCuoi
             this.Show_ComboboxMaNhanVien();
             this.Show_ComboboxChucVu();
             this.Show_ComboboxCa();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             string query = "select * from NhanVien";
             DataProvider provider = new DataProvider();
             dataGridViewDSNhanVien.DataSource = provider.ExecuteQuery(query);
         }
 
+        
+
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form frm = new NhanVien();
-            frm.ShowDialog();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            if ( textBoxTenNhanVien.Text != "" && textBoxSoDienThoai.Text !="" &&  textBoxDiaChi.Text !="" )
+            if (textBoxTenNhanVien.Text != "" && textBoxSoDienThoai.Text != "" && textBoxDiaChi.Text != "")
             {
                 try
                 {
@@ -87,19 +78,18 @@ namespace QL_TiecCuoi
                      + comboBoxChucVu.SelectedValue.ToString().Trim() + "')";
                     provider.ExecuteWrite(query);
                     Console.Write(query);
-                    MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                    MessageBox.Show("Bạn đã thêm thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
                 }
                 catch
                 {
-                    MessageBox.Show("Lỗi, không lưu được");
+                    MessageBox.Show("Lỗi, không thêm được");
                 }
             }
             else
-                MessageBox.Show("Lỗi, không lưu được");
-
-
-
+                MessageBox.Show("Lỗi, không thêm được");
         }
+
+        
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -155,6 +145,13 @@ namespace QL_TiecCuoi
         private void textBoxTenNhanVien_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string query = "select * from NhanVien";
+            DataProvider provider = new DataProvider();
+            dataGridViewDSNhanVien.DataSource = provider.ExecuteQuery(query);
         }
     }
 }

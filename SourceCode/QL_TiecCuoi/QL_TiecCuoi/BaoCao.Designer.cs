@@ -33,13 +33,10 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxSLTiec = new System.Windows.Forms.TextBox();
             this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
-            this.textBoxMaBaoCao = new System.Windows.Forms.TextBox();
-            this.comboBoxMaNguoiLap = new System.Windows.Forms.ComboBox();
             this.textBoxChucVu = new System.Windows.Forms.TextBox();
             this.textBoxTenNguoiLap = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +44,9 @@
             this.dataGridViewDSBaoCao = new System.Windows.Forms.DataGridView();
             this.buttonXemBaoCao = new System.Windows.Forms.Button();
             this.buttonThoat = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxMaBaoCao = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDSBaoCao)).BeginInit();
@@ -65,10 +65,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.textBoxSLTiec);
             this.groupBox1.Controls.Add(this.dateTimePickerNgayLap);
             this.groupBox1.Controls.Add(this.textBoxMaBaoCao);
-            this.groupBox1.Controls.Add(this.comboBoxMaNguoiLap);
             this.groupBox1.Controls.Add(this.textBoxChucVu);
             this.groupBox1.Controls.Add(this.textBoxTenNguoiLap);
             this.groupBox1.Controls.Add(this.label7);
@@ -99,22 +99,6 @@
             this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
             this.dateTimePickerNgayLap.Size = new System.Drawing.Size(191, 22);
             this.dateTimePickerNgayLap.TabIndex = 12;
-            // 
-            // textBoxMaBaoCao
-            // 
-            this.textBoxMaBaoCao.Location = new System.Drawing.Point(462, 29);
-            this.textBoxMaBaoCao.Name = "textBoxMaBaoCao";
-            this.textBoxMaBaoCao.Size = new System.Drawing.Size(191, 22);
-            this.textBoxMaBaoCao.TabIndex = 11;
-            // 
-            // comboBoxMaNguoiLap
-            // 
-            this.comboBoxMaNguoiLap.FormattingEnabled = true;
-            this.comboBoxMaNguoiLap.Location = new System.Drawing.Point(154, 29);
-            this.comboBoxMaNguoiLap.Name = "comboBoxMaNguoiLap";
-            this.comboBoxMaNguoiLap.Size = new System.Drawing.Size(166, 24);
-            this.comboBoxMaNguoiLap.TabIndex = 9;
-            this.comboBoxMaNguoiLap.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaNguoiLap_SelectedIndexChanged);
             // 
             // textBoxChucVu
             // 
@@ -149,16 +133,6 @@
             this.label6.Size = new System.Drawing.Size(63, 16);
             this.label6.TabIndex = 4;
             this.label6.Text = "Ngày lập";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label5.Location = new System.Drawing.Point(349, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 16);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Mã báo cáo";
             // 
             // label4
             // 
@@ -231,6 +205,30 @@
             this.buttonThoat.UseVisualStyleBackColor = true;
             this.buttonThoat.Click += new System.EventHandler(this.button2_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(154, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 22);
+            this.textBox1.TabIndex = 14;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label5.Location = new System.Drawing.Point(349, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 16);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Mã báo cáo";
+            // 
+            // textBoxMaBaoCao
+            // 
+            this.textBoxMaBaoCao.Location = new System.Drawing.Point(462, 29);
+            this.textBoxMaBaoCao.Name = "textBoxMaBaoCao";
+            this.textBoxMaBaoCao.Size = new System.Drawing.Size(191, 22);
+            this.textBoxMaBaoCao.TabIndex = 11;
+            // 
             // BaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,16 +262,16 @@
         private System.Windows.Forms.Button buttonThoat;
         private System.Windows.Forms.DataGridView dataGridViewDSBaoCao;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayLap;
-        private System.Windows.Forms.TextBox textBoxMaBaoCao;
-        private System.Windows.Forms.ComboBox comboBoxMaNguoiLap;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxSLTiec;
         private System.Windows.Forms.TextBox textBoxChucVu;
         private System.Windows.Forms.TextBox textBoxTenNguoiLap;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxMaBaoCao;
+        private System.Windows.Forms.Label label5;
     }
 }

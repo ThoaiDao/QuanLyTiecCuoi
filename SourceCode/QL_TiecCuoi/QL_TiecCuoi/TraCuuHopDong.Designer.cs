@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TraCuuHopDong));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonThoat = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -48,6 +49,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonThoat);
             this.panel1.Controls.Add(this.groupBox1);
@@ -62,6 +64,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(729, 423);
             this.panel1.TabIndex = 10;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(249, 388);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Tính tiền";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -151,10 +163,10 @@
             this.radioButtonMaKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonMaKH.Location = new System.Drawing.Point(276, 78);
             this.radioButtonMaKH.Name = "radioButtonMaKH";
-            this.radioButtonMaKH.Size = new System.Drawing.Size(121, 20);
+            this.radioButtonMaKH.Size = new System.Drawing.Size(126, 20);
             this.radioButtonMaKH.TabIndex = 4;
             this.radioButtonMaKH.TabStop = true;
-            this.radioButtonMaKH.Text = "Mã Khách Hàng";
+            this.radioButtonMaKH.Text = "Tên Khách Hàng";
             this.radioButtonMaKH.UseVisualStyleBackColor = true;
             this.radioButtonMaKH.CheckedChanged += new System.EventHandler(this.radioButtonMaKH_CheckedChanged);
             // 
@@ -175,11 +187,12 @@
             this.radioButtonMaDatTiec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonMaDatTiec.Location = new System.Drawing.Point(414, 78);
             this.radioButtonMaDatTiec.Name = "radioButtonMaDatTiec";
-            this.radioButtonMaDatTiec.Size = new System.Drawing.Size(101, 20);
+            this.radioButtonMaDatTiec.Size = new System.Drawing.Size(111, 20);
             this.radioButtonMaDatTiec.TabIndex = 5;
             this.radioButtonMaDatTiec.TabStop = true;
-            this.radioButtonMaDatTiec.Text = "Mã  Đặt Tiệc";
+            this.radioButtonMaDatTiec.Text = "Số Điện Thoại";
             this.radioButtonMaDatTiec.UseVisualStyleBackColor = true;
+            this.radioButtonMaDatTiec.CheckedChanged += new System.EventHandler(this.radioButtonMaDatTiec_CheckedChanged);
             // 
             // TraCuuHopDong
             // 
@@ -214,5 +227,6 @@
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.DataGridView dataGridViewTraCuuHopDong;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

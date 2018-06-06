@@ -164,10 +164,10 @@
             this.radioButtonMaHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonMaHD.Location = new System.Drawing.Point(392, 78);
             this.radioButtonMaHD.Name = "radioButtonMaHD";
-            this.radioButtonMaHD.Size = new System.Drawing.Size(101, 20);
+            this.radioButtonMaHD.Size = new System.Drawing.Size(126, 20);
             this.radioButtonMaHD.TabIndex = 5;
             this.radioButtonMaHD.TabStop = true;
-            this.radioButtonMaHD.Text = "Mã Hóa Đơn";
+            this.radioButtonMaHD.Text = "Tên Khách Hàng";
             this.radioButtonMaHD.UseVisualStyleBackColor = true;
             // 
             // TraCuuHoaDon

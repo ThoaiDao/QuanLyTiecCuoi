@@ -33,16 +33,16 @@ namespace QL_TiecCuoi
         private void comboBoxMaNguoiLap_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataProvider provider = new DataProvider();
-            string a = comboBoxMaNguoiLap.SelectedValue.ToString();
-            if (a != "System.Data.DataRowView")
-            {
-                string query = "select * from ThucDon where MaThucDon = '" + a + "'";
-                Console.WriteLine(query);
-                DataTable thucDon = provider.ExecuteQuery(query);
+            ///string a = comboBoxMaNguoiLap.SelectedValue.ToString();
+           // if (a != "System.Data.DataRowView")
+            //{
+               // string query = "select * from ThucDon where MaThucDon = '" + a + "'";
+               // Console.WriteLine(query);
+                //DataTable thucDon = provider.ExecuteQuery(query);
                 //textBoxMonKhaiVi.Text = thucDon.Rows[0]["MonKhaiVi"].ToString();
                 //textBoxMonChinh1.Text = thucDon.Rows[0]["MonChinh1"].ToString();
                
             }
         }
     }
-}
+

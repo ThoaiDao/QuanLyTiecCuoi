@@ -153,7 +153,19 @@ namespace QL_TiecCuoi
        
         private void comboBoxLoaiSanh_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DataProvider provider = new DataProvider();
+            string a = comboBoxLoaiSanh.SelectedValue.ToString();
+            if (a != "System.Data.DataRowView")
+            {
+                string query = "select SoLuongBanToiDa from ThongTinSanh where LoaiSanh = '" + a + "'";
+                DataTable SLBan = provider.ExecuteQuery(query);
+                int userVal = int.Parse(textBoxSoLuongBan.Text);
+                int i = Convert.ToInt32(textBoxSoLuongBan.Text);
+                textBoxSoLuongBan.Text = i.ToString();
+            
 
+
+            }
         }
 
         private void comboBoxTenNhanVien_SelectedIndexChanged(object sender, EventArgs e)
@@ -181,6 +193,13 @@ namespace QL_TiecCuoi
         private void label20_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frm = new TraCuuHopDong();
+            frm.ShowDialog();
         }
     }
 }

@@ -30,10 +30,10 @@ namespace QL_TiecCuoi
         {
            
             string valueFilter = textBoxHopDong.Text.ToString().Trim();
-            string fieldFilter = "MaKhachHang";
+            string fieldFilter = "TenKhachHang";
             if (radioButtonMaDatTiec.Checked)
             {
-                fieldFilter = "MaDatTiec";
+                fieldFilter = "DienThoai";
             }
 
             string query1 = "Select a.*, p.*from ThongTinDatTiec a inner join ThongTinKhachHang p on p.id = a.IDThongTinKhachHang where " + fieldFilter + " like '%" + valueFilter + "%'";
@@ -138,6 +138,18 @@ namespace QL_TiecCuoi
         }
 
         private void radioButtonMaKH_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frm = new LapHoaDon();
+            frm.ShowDialog();
+        }
+
+        private void radioButtonMaDatTiec_CheckedChanged(object sender, EventArgs e)
         {
 
         }

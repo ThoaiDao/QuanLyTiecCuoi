@@ -29,7 +29,7 @@ namespace QL_TiecCuoi
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form frm = new ThongTinSanh();
+            Form frm = new ThongTin();
             frm.ShowDialog();
 
         }
