@@ -34,18 +34,18 @@ Create table ThongTinSanh
 	id int identity(1,1) primary key,
 	LoaiSanh nvarchar(100) ,
 	TenSanh nvarchar(100) not null default N'Chưa Đặt Tên',
-	SoLuongBanToiDa float not null default 700,
-	DonGiaToiThieu money not null default 300000000,
+	SoLuongBanToiDa int not null,
+	DonGiaToiThieu money not null,
 	GhiChu nvarchar(100) default N'Trống',
-	TiSoPhat float 
+	TiSoPhat float default 0.01
 )
 go
 
-insert into ThongTinSanh values(N'Loai A',N'Kim Cương',N'500',N'50000000','free Ca Tôi', 0.01)
-insert into ThongTinSanh values(N'Loai B',N'Bạch Kim',N'450',N'45000000','Full', 0.01)
-insert into ThongTinSanh values(N'Loai C',N'Vàng',N'400',N'40000000','free Ca Trưa', 0.01)
-insert into ThongTinSanh values(N'Loai D',N'Bạc',N'350',N'35000000','Full', 0.01)
-insert into ThongTinSanh values(N'Loai E',N'Đồng',N'300',N'30000000','free', 0.01)
+insert into ThongTinSanh values(N'Loai A',N'Kim Cương',N'500',N'50000000','Không', 0.01)
+insert into ThongTinSanh values(N'Loai B',N'Bạch Kim',N'450',N'45000000','Không', 0.01)
+insert into ThongTinSanh values(N'Loai C',N'Vàng',N'400',N'40000000','Không', 0.01)
+insert into ThongTinSanh values(N'Loai D',N'Bạc',N'350',N'35000000','Không', 0.01)
+insert into ThongTinSanh values(N'Loai E',N'Đồng',N'300',N'30000000','Không', 0.01)
 --
 
 go
@@ -124,7 +124,7 @@ drop table Tiec
 Create table ThongTinkhachHang
 (
 	id int identity(1,1),
-	MaKhachHang  AS RIGHT('KH00' + CAST(id AS VARCHAR(5)), 5) PERSISTED,
+	MaKhachHang  AS RIGHT('KH' + CAST(id AS VARCHAR(5)), 5) PERSISTED,
 	NgayLap date not null,
 	TenKhachHang nvarchar(100) not null,
 	TenChuRe nvarchar(100) not null,
@@ -136,20 +136,10 @@ Create table ThongTinkhachHang
 	TienCoc money,
 	primary key(id)
 )
-ALTER TABLE ThongTinKhachHang ADD PRIMARY KEY (MaKhachHang)
+
 Drop table ThongTinkhachHang;
-ALTER TABLE ThongTinkhachHang DROP COLUMN MaKhachHang
 
 
-alter FUNCTION dbo.generate_code_kh(@id int)
-RETURNS CHAR(20) 
-AS 
-BEGIN 
-    RETURN 'KH'+ right('00' + CONVERT(VARCHAR(10),@id),3) 
-END
-
-
-ALTER TABLE ThongTinkhachHang ADD MaKhachHang AS dbo.generate_code_kh(id);
 
 
 go
@@ -165,7 +155,7 @@ go
 Create table ThongTinDatTiec
 (
 	id int identity(1,1) ,
-	MaDatTiec  AS RIGHT('DT00' + CAST(id AS VARCHAR(5)), 5) PERSISTED,
+	MaDatTiec  AS RIGHT('DT' + CAST(id AS VARCHAR(5)), 5) PERSISTED,
 	IDNhanVien int FOREIGN KEY REFERENCES NhanVienTiepTan(id),
 	IDThongTinKhachHang int FOREIGN KEY REFERENCES ThongTinKhachHang(id),
 	IdLoaiSanh int FOREIGN KEY REFERENCES ThongTinSanh(id),
@@ -243,7 +233,7 @@ go
 Create table HoaDon
 (
 	id int identity(1,1) primary key,
-	MaHoaDon  AS RIGHT('HĐon00' + CAST(id AS VARCHAR(7)), 7) PERSISTED,
+	MaHoaDon  AS RIGHT('HĐ' + CAST(id AS VARCHAR(7)), 7) PERSISTED,
 	IdMaDatTiec int FOREIGN KEY REFERENCES ThongTinDatTiec(id),
 	IDThongTinKhachHang int FOREIGN KEY REFERENCES ThongTinKhachHang(id),
 	IdLoaiSanh int FOREIGN KEY REFERENCES ThongTinSanh(id),
@@ -281,7 +271,7 @@ drop table HoaDon
 Create table NhanVienTiepTan
 (
 	id int identity(1,1) primary key,
-	MaNhanVien AS RIGHT('NV00' + CAST(id AS VARCHAR(5)), 5) PERSISTED,
+	MaNhanVien nvarchar(100),-- AS RIGHT('NV' + CAST(id AS VARCHAR(5)), 5) PERSISTED,
 	TenNhanVien nvarchar(100) ,
 	SoDienThoai nvarchar(100) ,
 	DiaChi nvarchar(100) ,
@@ -293,10 +283,10 @@ select * from NhanVienTiepTan
 Drop table NhanVienTiepTan
 go
 
-insert into NhanVienTiepTan values( N'Huyền Thoại', N'01223810110',N'Hoàng Diệu 2', N'Sáng')
-insert into NhanVienTiepTan values( N'Thu Thiên', N'01223810111',N'Hoàng Diệu 3', N'Trưa')
-insert into NhanVienTiepTan values( N'Thái Dương', N'01223810112',N'Hoàng Diệu 4', N'Tối')
-insert into NhanVienTiepTan values( N'Duy Tân', N'01223810113',N'Hoàng Diệu 5', N'Sáng')
+insert into NhanVienTiepTan values( N'NV1',N'Huyền Thoại', N'01223810110',N'Hoàng Diệu 2', N'Sáng')
+insert into NhanVienTiepTan values(N'NV2', N'Thu Thiên', N'01223810111',N'Hoàng Diệu 3', N'Trưa')
+insert into NhanVienTiepTan values( N'NV3',N'Thái Dương', N'01223810112',N'Hoàng Diệu 4', N'Tối')
+insert into NhanVienTiepTan values(N'NV4', N'Duy Tân', N'01223810113',N'Hoàng Diệu 5', N'Sáng')
 go
 select * from NhanVienTiepTan
 delete from NhanVienTiepTan
@@ -308,7 +298,7 @@ go
 Create table NhanVien
 (
 	id int identity(5,1) primary key,
-	MaNhanVien AS RIGHT('NV00' + CAST(id AS VARCHAR(5)), 5) PERSISTED,
+	MaNhanVien AS RIGHT('NV' + CAST(id AS VARCHAR(5)), 5) PERSISTED,
 	TenNhanVien nvarchar(100) not null,
 	SoDienThoai nvarchar(100) not null,
 	DiaChi nvarchar(100) not null,
