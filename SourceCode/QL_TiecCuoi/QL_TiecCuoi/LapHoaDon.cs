@@ -14,7 +14,6 @@ namespace QL_TiecCuoi
 {
     public partial class LapHoaDon : Form
     {
-        private Button buttonInHD;
         private Button button2;
         private Button buttonXem;
         private GroupBox groupBox2;
@@ -86,6 +85,7 @@ namespace QL_TiecCuoi
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LapHoaDon));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBoxPhat = new System.Windows.Forms.TextBox();
@@ -109,7 +109,6 @@ namespace QL_TiecCuoi
             this.label19 = new System.Windows.Forms.Label();
             this.labelDichVu = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.buttonInHD = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.buttonXem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -132,12 +131,11 @@ namespace QL_TiecCuoi
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBoxPhieuDT = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dateTimePickerLapHD = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBoxPhieuDT = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -155,7 +153,6 @@ namespace QL_TiecCuoi
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.groupBox5);
-            this.panel1.Controls.Add(this.buttonInHD);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.buttonXem);
             this.panel1.Controls.Add(this.groupBox2);
@@ -177,6 +174,17 @@ namespace QL_TiecCuoi
             this.button1.Text = "Xem Thông Tin Hợp Đồng";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label13.Location = new System.Drawing.Point(231, 101);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 16);
+            this.label13.TabIndex = 19;
+            this.label13.Text = "Mã phiếu đặt tiệc";
             // 
             // groupBox5
             // 
@@ -410,16 +418,6 @@ namespace QL_TiecCuoi
             this.label17.TabIndex = 4;
             this.label17.Text = "Tiền thực đơn:";
             // 
-            // buttonInHD
-            // 
-            this.buttonInHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInHD.Location = new System.Drawing.Point(592, 539);
-            this.buttonInHD.Name = "buttonInHD";
-            this.buttonInHD.Size = new System.Drawing.Size(90, 26);
-            this.buttonInHD.TabIndex = 9;
-            this.buttonInHD.Text = "In hóa đơn";
-            this.buttonInHD.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -637,6 +635,13 @@ namespace QL_TiecCuoi
             this.label5.TabIndex = 1;
             this.label5.Text = "Ngày đặt tiệc";
             // 
+            // textBoxPhieuDT
+            // 
+            this.textBoxPhieuDT.Location = new System.Drawing.Point(355, 97);
+            this.textBoxPhieuDT.Name = "textBoxPhieuDT";
+            this.textBoxPhieuDT.Size = new System.Drawing.Size(163, 20);
+            this.textBoxPhieuDT.TabIndex = 4;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dateTimePickerLapHD);
@@ -673,24 +678,6 @@ namespace QL_TiecCuoi
             this.label1.Size = new System.Drawing.Size(289, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Lập Hóa Đơn Thanh Toán";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label13.Location = new System.Drawing.Point(231, 101);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 16);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "Mã phiếu đặt tiệc";
-            // 
-            // textBoxPhieuDT
-            // 
-            this.textBoxPhieuDT.Location = new System.Drawing.Point(355, 97);
-            this.textBoxPhieuDT.Name = "textBoxPhieuDT";
-            this.textBoxPhieuDT.Size = new System.Drawing.Size(163, 20);
-            this.textBoxPhieuDT.TabIndex = 4;
             // 
             // LapHoaDon
             // 

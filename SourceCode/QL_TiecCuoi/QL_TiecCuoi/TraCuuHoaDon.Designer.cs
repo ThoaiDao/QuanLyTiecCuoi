@@ -40,6 +40,7 @@
             this.radioButtonTenKH = new System.Windows.Forms.RadioButton();
             this.buttonTim = new System.Windows.Forms.Button();
             this.radioButtonMaHD = new System.Windows.Forms.RadioButton();
+            this.buttonInHD = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTraCuuHoaDon)).BeginInit();
@@ -47,6 +48,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonInHD);
             this.panel1.Controls.Add(this.buttonXem);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.button5);
@@ -64,7 +66,7 @@
             // buttonXem
             // 
             this.buttonXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXem.Location = new System.Drawing.Point(455, 116);
+            this.buttonXem.Location = new System.Drawing.Point(470, 125);
             this.buttonXem.Name = "buttonXem";
             this.buttonXem.Size = new System.Drawing.Size(75, 23);
             this.buttonXem.TabIndex = 13;
@@ -106,7 +108,7 @@
             // buttonXoa
             // 
             this.buttonXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonXoa.Location = new System.Drawing.Point(490, 384);
+            this.buttonXoa.Location = new System.Drawing.Point(377, 384);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(75, 23);
             this.buttonXoa.TabIndex = 10;
@@ -150,7 +152,7 @@
             // buttonTim
             // 
             this.buttonTim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTim.Location = new System.Drawing.Point(579, 116);
+            this.buttonTim.Location = new System.Drawing.Point(587, 125);
             this.buttonTim.Name = "buttonTim";
             this.buttonTim.Size = new System.Drawing.Size(75, 23);
             this.buttonTim.TabIndex = 6;
@@ -169,6 +171,16 @@
             this.radioButtonMaHD.TabStop = true;
             this.radioButtonMaHD.Text = "Tên Khách Hàng";
             this.radioButtonMaHD.UseVisualStyleBackColor = true;
+            // 
+            // buttonInHD
+            // 
+            this.buttonInHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInHD.Location = new System.Drawing.Point(491, 382);
+            this.buttonInHD.Name = "buttonInHD";
+            this.buttonInHD.Size = new System.Drawing.Size(90, 26);
+            this.buttonInHD.TabIndex = 12;
+            this.buttonInHD.Text = "In hóa đơn";
+            this.buttonInHD.UseVisualStyleBackColor = true;
             // 
             // TraCuuHoaDon
             // 
@@ -202,5 +214,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button buttonXoa;
         private System.Windows.Forms.Button buttonXem;
+        private System.Windows.Forms.Button buttonInHD;
     }
 }

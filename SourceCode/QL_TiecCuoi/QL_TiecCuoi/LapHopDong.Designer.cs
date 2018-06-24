@@ -109,6 +109,7 @@
             this.textBoxTienCoc.Name = "textBoxTienCoc";
             this.textBoxTienCoc.Size = new System.Drawing.Size(225, 22);
             this.textBoxTienCoc.TabIndex = 28;
+            this.textBoxTienCoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTienCoc_KeyPress);
             // 
             // labelTienCoc
             // 
@@ -141,6 +142,7 @@
             this.textBoxDienThoai.Name = "textBoxDienThoai";
             this.textBoxDienThoai.Size = new System.Drawing.Size(225, 22);
             this.textBoxDienThoai.TabIndex = 24;
+            this.textBoxDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDienThoai_KeyPress);
             // 
             // textBoxDiaChi
             // 
@@ -155,6 +157,7 @@
             this.textBoxTenCoDau.Name = "textBoxTenCoDau";
             this.textBoxTenCoDau.Size = new System.Drawing.Size(225, 22);
             this.textBoxTenCoDau.TabIndex = 22;
+            this.textBoxTenCoDau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTenCoDau_KeyPress);
             // 
             // textBoxTenChuRe
             // 
@@ -162,6 +165,7 @@
             this.textBoxTenChuRe.Name = "textBoxTenChuRe";
             this.textBoxTenChuRe.Size = new System.Drawing.Size(225, 22);
             this.textBoxTenChuRe.TabIndex = 21;
+            this.textBoxTenChuRe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTenChuRe_KeyPress);
             // 
             // textBoxTenKhachHang
             // 
@@ -170,6 +174,7 @@
             this.textBoxTenKhachHang.Size = new System.Drawing.Size(225, 22);
             this.textBoxTenKhachHang.TabIndex = 20;
             this.textBoxTenKhachHang.TextChanged += new System.EventHandler(this.textBoxNgayLap_TextChanged);
+            this.textBoxTenKhachHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTenKhachHang_KeyPress);
             // 
             // dateTimePickerNgayLap
             // 
@@ -355,6 +360,7 @@
             this.textBoxSLNhanVien.Name = "textBoxSLNhanVien";
             this.textBoxSLNhanVien.Size = new System.Drawing.Size(185, 22);
             this.textBoxSLNhanVien.TabIndex = 33;
+            this.textBoxSLNhanVien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSLNhanVien_KeyPress);
             // 
             // textBoxSoLuongBan
             // 
@@ -362,6 +368,7 @@
             this.textBoxSoLuongBan.Name = "textBoxSoLuongBan";
             this.textBoxSoLuongBan.Size = new System.Drawing.Size(185, 22);
             this.textBoxSoLuongBan.TabIndex = 27;
+            this.textBoxSoLuongBan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoLuongBan_KeyPress);
             // 
             // comboBoxLoaiSanh
             // 

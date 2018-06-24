@@ -98,8 +98,8 @@ namespace QL_TiecCuoi
                 Console.Write(updateStr);
                 provider.ExecuteUpdate(updateStr);
 
-                string query = "select * from NhanVien";
-                dataGridViewTraCuuNV.DataSource = provider.ExecuteQuery(query);
+                //string query = "select * from NhanVien";
+               // dataGridViewTraCuuNV.DataSource = provider.ExecuteQuery(query);
                 MessageBox.Show("Bạn đã sửa thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
 
             }

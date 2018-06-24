@@ -38,23 +38,17 @@ namespace QL_TiecCuoi
                 DataProvider provider = new DataProvider();
                 int CurrentIndex = dataGridViewTraCuuHoaDon.CurrentCell.RowIndex;
                 string a = Convert.ToString(dataGridViewTraCuuHoaDon.Rows[CurrentIndex].Cells[0].Value.ToString());
-                string deletedStr1 = "Delete from ThongTinDatTiec where ThongTinDatTiec.id='" + a + "'";
-                provider.ExecuteDelete(deletedStr1);
-                string deletedStr2 = "Delete from ThongTinKhachHang where ThongTinKhachHang.id='" + a + "'";
-                Console.Write(deletedStr1);
-                Console.Write(deletedStr1);
-                provider.ExecuteDelete(deletedStr2);
                 string deletedStr3 = "Delete from HoaDon where HoaDon.id='" + a + "'";
                 provider.ExecuteDelete(deletedStr3);
                 DataSet ds = new DataSet();
                 SqlDataAdapter da = new SqlDataAdapter();
-                /*string query = @"Select h.id, h.MaHoaDon,t.MaDatTiec,p.MaKhachhang, p.TenKhachHang, s.DonGiaToiThieu as TienSanh, dv.GiaDichVu, td.GiaThucDon, h.TienPhat, h.TienCoc, h.TongTienHoaDon ,h.TienConLai
+                string query = @"Select h.id, h.MaHoaDon,t.MaDatTiec,p.MaKhachhang, p.TenKhachHang, s.DonGiaToiThieu as TienSanh, dv.GiaDichVu, td.GiaThucDon, h.TienPhat, h.TienCoc, h.TongTienHoaDon ,h.TienConLai
               from HoaDon h left join ThongTinKhachHang p on p.id = h.IDThongTinKhachHang
               left join ThongTinDatTiec t on t.id = h.IdMaDatTiec
               left join ThongTinSanh s on s.id = h.IdLoaiSanh
               left join DichVu dv on dv.id = h.IdDichVu
               left join ThucDon td on td.id = h.IdThucDon";
-                dataGridViewTraCuuHoaDon.DataSource = provider.ExecuteQuery(query);*/
+                dataGridViewTraCuuHoaDon.DataSource = provider.ExecuteQuery(query);
                 MessageBox.Show("Bạn đã xóa thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
 
             }

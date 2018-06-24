@@ -120,8 +120,8 @@ namespace QL_TiecCuoi
                    + ca +"' where ThongTinDatTiec.id = '" + ID + "'";
                 //Console.WriteLine(updateStr2);
                 provider.ExecuteUpdate(updateStr2);
-                string query = "Select a.*, p.*from ThongTinDatTiec a inner join ThongTinKhachHang p on p.id = a.IDThongTinKhachHang";
-                dataGridViewTraCuuHopDong.DataSource = provider.ExecuteQuery(query);
+               // string query = "Select a.*, p.*from ThongTinDatTiec a inner join ThongTinKhachHang p on p.id = a.IDThongTinKhachHang";
+                //dataGridViewTraCuuHopDong.DataSource = provider.ExecuteQuery(query);
                 MessageBox.Show("Bạn đã sửa thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
             }
             catch(Exception err)
