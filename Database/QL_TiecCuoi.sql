@@ -18,10 +18,10 @@ Create table TaiKhoan
 	MatKhau nvarchar(1000 ) not null
 )
 go
-insert into TaiKhoan values(N'NguyenThaiDuong',N'1')
-insert into TaiKhoan values(N'DaoAnhNuHuyenThoai',N'2')
-insert into TaiKhoan values(N'TruongThiThuThien',N'3')
-insert into TaiKhoan values(N'LeDuyTan',N'4')
+insert into TaiKhoan values(N'ThaiDuong',N'1')
+insert into TaiKhoan values(N'HuyenThoai',N'2')
+insert into TaiKhoan values(N'ThuThien',N'3')
+insert into TaiKhoan values(N'DuyTan',N'4')
 go
 select * from TaiKhoan 
 delete from TaiKhoan
@@ -313,6 +313,10 @@ insert into NhanVien values( N'Hoa', N'01223810110',N'Hoàng Diệu 2',N'Loai A'
 insert into NhanVien values( N'Hồng', N'01223810111',N'Hoàng Diệu 3',N'Loai B', N'Giám Sát', N'Trưa')
 insert into NhanVien values( N'Cúc', N'01223810112',N'Hoàng Diệu 4',N'Loai C', N'Phục vụ', N'Tối')
 insert into NhanVien values( N'Duy', N'01223810113',N'Hoàng Diệu 5',N'Loai E', N'Quản lý', N'Sáng')
+insert into NhanVien values( N'Hoàng', N'01223811234',N'Hoàng Diệu 6',N'Loai A', N'Phục vụ', N'Sáng')
+insert into NhanVien values( N'Mai', N'01223811235',N'Hoàng Diệu 7',N'Loai B', N'Giám Sát', N'Trưa')
+insert into NhanVien values( N'Ngọc', N'01223811236',N'Hoàng Diệu 8',N'Loai C', N'Phục vụ', N'Tối')
+insert into NhanVien values( N'Uyên', N'01223811237',N'Hoàng Diệu9',N'Loai E', N'Quản lý', N'Sáng')
 go
 select * from NhanVien
 drop table NhanVien
