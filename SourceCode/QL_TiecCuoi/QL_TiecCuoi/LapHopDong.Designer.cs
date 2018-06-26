@@ -32,14 +32,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxTienCoc = new System.Windows.Forms.TextBox();
             this.labelTienCoc = new System.Windows.Forms.Label();
-            this.dateTimePickerNgayToChuc = new System.Windows.Forms.DateTimePicker();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxDienThoai = new System.Windows.Forms.TextBox();
             this.textBoxDiaChi = new System.Windows.Forms.TextBox();
             this.textBoxTenCoDau = new System.Windows.Forms.TextBox();
             this.textBoxTenChuRe = new System.Windows.Forms.TextBox();
             this.textBoxTenKhachHang = new System.Windows.Forms.TextBox();
-            this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -70,22 +68,24 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.dateTimePickerNgayToChuc = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dateTimePickerNgayLap);
+            this.groupBox1.Controls.Add(this.dateTimePickerNgayToChuc);
             this.groupBox1.Controls.Add(this.textBoxTienCoc);
             this.groupBox1.Controls.Add(this.labelTienCoc);
-            this.groupBox1.Controls.Add(this.dateTimePickerNgayToChuc);
             this.groupBox1.Controls.Add(this.textBoxEmail);
             this.groupBox1.Controls.Add(this.textBoxDienThoai);
             this.groupBox1.Controls.Add(this.textBoxDiaChi);
             this.groupBox1.Controls.Add(this.textBoxTenCoDau);
             this.groupBox1.Controls.Add(this.textBoxTenChuRe);
             this.groupBox1.Controls.Add(this.textBoxTenKhachHang);
-            this.groupBox1.Controls.Add(this.dateTimePickerNgayLap);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
@@ -109,6 +109,7 @@
             this.textBoxTienCoc.Name = "textBoxTienCoc";
             this.textBoxTienCoc.Size = new System.Drawing.Size(225, 22);
             this.textBoxTienCoc.TabIndex = 28;
+            this.textBoxTienCoc.TextChanged += new System.EventHandler(this.textBoxTienCoc_TextChanged);
             this.textBoxTienCoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTienCoc_KeyPress);
             // 
             // labelTienCoc
@@ -121,13 +122,6 @@
             this.labelTienCoc.TabIndex = 27;
             this.labelTienCoc.Text = "Đặt tiền cọc";
             this.labelTienCoc.Click += new System.EventHandler(this.label20_Click);
-            // 
-            // dateTimePickerNgayToChuc
-            // 
-            this.dateTimePickerNgayToChuc.Location = new System.Drawing.Point(122, 286);
-            this.dateTimePickerNgayToChuc.Name = "dateTimePickerNgayToChuc";
-            this.dateTimePickerNgayToChuc.Size = new System.Drawing.Size(225, 22);
-            this.dateTimePickerNgayToChuc.TabIndex = 26;
             // 
             // textBoxEmail
             // 
@@ -142,6 +136,7 @@
             this.textBoxDienThoai.Name = "textBoxDienThoai";
             this.textBoxDienThoai.Size = new System.Drawing.Size(225, 22);
             this.textBoxDienThoai.TabIndex = 24;
+            this.textBoxDienThoai.TextChanged += new System.EventHandler(this.textBoxDienThoai_TextChanged);
             this.textBoxDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDienThoai_KeyPress);
             // 
             // textBoxDiaChi
@@ -165,7 +160,9 @@
             this.textBoxTenChuRe.Name = "textBoxTenChuRe";
             this.textBoxTenChuRe.Size = new System.Drawing.Size(225, 22);
             this.textBoxTenChuRe.TabIndex = 21;
+            this.textBoxTenChuRe.TextChanged += new System.EventHandler(this.textBoxTenChuRe_TextChanged);
             this.textBoxTenChuRe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTenChuRe_KeyPress);
+            this.textBoxTenChuRe.MouseEnter += new System.EventHandler(this.textBoxTenChuRe_MouseEnter);
             // 
             // textBoxTenKhachHang
             // 
@@ -175,13 +172,6 @@
             this.textBoxTenKhachHang.TabIndex = 20;
             this.textBoxTenKhachHang.TextChanged += new System.EventHandler(this.textBoxNgayLap_TextChanged);
             this.textBoxTenKhachHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTenKhachHang_KeyPress);
-            // 
-            // dateTimePickerNgayLap
-            // 
-            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(122, 25);
-            this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
-            this.dateTimePickerNgayLap.Size = new System.Drawing.Size(225, 22);
-            this.dateTimePickerNgayLap.TabIndex = 0;
             // 
             // label11
             // 
@@ -490,6 +480,20 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // dateTimePickerNgayToChuc
+            // 
+            this.dateTimePickerNgayToChuc.Location = new System.Drawing.Point(122, 286);
+            this.dateTimePickerNgayToChuc.Name = "dateTimePickerNgayToChuc";
+            this.dateTimePickerNgayToChuc.Size = new System.Drawing.Size(225, 22);
+            this.dateTimePickerNgayToChuc.TabIndex = 30;
+            // 
+            // dateTimePickerNgayLap
+            // 
+            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(122, 25);
+            this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
+            this.dateTimePickerNgayLap.Size = new System.Drawing.Size(225, 22);
+            this.dateTimePickerNgayLap.TabIndex = 31;
+            // 
             // LapHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -522,7 +526,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNgayLap;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -542,7 +545,6 @@
         private System.Windows.Forms.TextBox textBoxTenCoDau;
         private System.Windows.Forms.TextBox textBoxTenChuRe;
         private System.Windows.Forms.TextBox textBoxTenKhachHang;
-        private System.Windows.Forms.DateTimePicker dateTimePickerNgayToChuc;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -560,5 +562,7 @@
         private System.Windows.Forms.Label labelTienCoc;
         private System.Windows.Forms.TextBox textBoxTienCoc;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgayToChuc;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNgayLap;
     }
 }

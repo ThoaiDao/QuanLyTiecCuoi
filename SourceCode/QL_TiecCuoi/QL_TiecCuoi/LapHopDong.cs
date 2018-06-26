@@ -58,45 +58,112 @@ namespace QL_TiecCuoi
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // if(textBoxMaKhachHang.Text != "" && textBoxTenChuRe.Text !="")
-            try
+            if (textBoxTenKhachHang.Text != "" && textBoxTenChuRe.Text != "" && textBoxTenCoDau.Text != "" && textBoxDienThoai.Text != "" && textBoxDiaChi.Text != "" && textBoxEmail.Text != "" && textBoxTienCoc.Text != "" && textBoxSoLuongBan.Text != "" && textBoxSLNhanVien.Text != "")
             {
+                int a;
+                bool isAValid = int.TryParse(textBoxTienCoc.Text.Trim(), out a);
+                if (a < 10000000)
+                {
+                    MessageBox.Show("Số tiền cọc phải tối thiểu là 10.000.000 đồng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (a > 10000000)
+                {
+                    DataProvider provider = new DataProvider();
+                    string formatDate = "MM/dd/yyyy";
+                    string query1 = "Insert into ThongTinKhachHang ( NgayLap, TenKhachHang, TenChuRe, TenCoDau, DiaChi, DienThoai,EMail, NgayToChuc, TienCoc) Values('"
 
-                DataProvider provider = new DataProvider();
-                string formatDate = "MM/dd/yyyy";
-                string query1 = "Insert into ThongTinKhachHang ( NgayLap, TenKhachHang, TenChuRe, TenCoDau, DiaChi, DienThoai,EMail, NgayToChuc, TienCoc) Values('"
-                    //+ textBoxMaKhachHang.Text = KH.TangMaKhachHang(query) + "' , '"
-                    + dateTimePickerNgayLap.Value.ToString(formatDate) + "' , '"
-                    + textBoxTenKhachHang.Text + "' , '"
-                    + textBoxTenChuRe.Text + "' , '"
-                    + textBoxTenCoDau.Text + "' , '"
-                    + textBoxDiaChi.Text + "' , '"
-                    + textBoxDienThoai.Text + "', '"
-                    + textBoxEmail.Text + "', '"
-                    + dateTimePickerNgayToChuc.Value.ToString(formatDate) + "', '"
-                    + textBoxTienCoc.Text + "')";
-                int IdThongTinKhachHang = provider.ExecuteWrite(query1);
-                string query2 = "Insert into ThongTinDatTiec (IDNhanVien,IDThongTinKhachHang,IdLoaiSanh,IdDichVu,IdThucDon,SoLuongNhanVien, SoLuongBan,TrangThai,Ca) Values("
-                        + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + ","
-                        + IdThongTinKhachHang + ",'"
-                        + comboBoxLoaiSanh.SelectedValue.ToString().Trim() + "','"
-                        + comboBoxDichVu.SelectedValue.ToString().Trim() + "','"
-                        + comboBoxThucDon.SelectedValue.ToString().Trim() + "','"
-                        + textBoxSLNhanVien.Text + "' , '"
-                        + textBoxSoLuongBan.Text + "', '"
-                        + comboBoxTrangThai.SelectedValue.ToString().Trim() + "','"
-                        + comboBoxCa.SelectedValue.ToString().Trim() + "' )";
-
-                provider.ExecuteWrite(query2);
-                string query3 = "Insert into NhanVienTiepTan(TenNhanVien) values ( '" + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + "')";
-                provider.ExecuteWrite(query3);
+                        + dateTimePickerNgayLap.Value.ToString(formatDate) + "' , '"
+                        //+ textBoxNgayLap.Text + "' , '"
+                        + textBoxTenKhachHang.Text + "' , '"
+                        + textBoxTenChuRe.Text + "' , '"
+                        + textBoxTenCoDau.Text + "' , '"
+                        + textBoxDiaChi.Text + "' , '"
+                        + textBoxDienThoai.Text + "', '"
+                        + textBoxEmail.Text + "', '"
+                         + dateTimePickerNgayToChuc.Value.ToString(formatDate) + "' , '"
+                         //+ textBoxNgayToChuc.Text + "', '"
+                         + textBoxTienCoc.Text + "')";
+                    int IdThongTinKhachHang = provider.ExecuteWrite(query1);
+                    string query2 = "Insert into ThongTinDatTiec (IDNhanVien,IDThongTinKhachHang,IdLoaiSanh,IdDichVu,IdThucDon,SoLuongNhanVien, SoLuongBan,TrangThai,Ca) Values("
+                            + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + ","
+                            + IdThongTinKhachHang + ",'"
+                            + comboBoxLoaiSanh.SelectedValue.ToString().Trim() + "','"
+                            + comboBoxDichVu.SelectedValue.ToString().Trim() + "','"
+                            + comboBoxThucDon.SelectedValue.ToString().Trim() + "','"
+                            + textBoxSLNhanVien.Text + "' , '"
+                            + textBoxSoLuongBan.Text + "', '"
+                            + comboBoxTrangThai.SelectedValue.ToString().Trim() + "','"
+                            + comboBoxCa.SelectedValue.ToString().Trim() + "' )";
+                    string query3 = "Insert into NhanVienTiepTan(TenNhanVien) values ( '" + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + "')";
+                    Console.WriteLine("Query 1",query1);
+                    provider.ExecuteWrite(query1);
+                    provider.ExecuteWrite(query2);
+                 
+                    provider.ExecuteWrite(query3);
+                }
                 MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
-            }
-            catch
-            {
-                MessageBox.Show("Lỗi, không lưu được");
-            }
 
+            }
+            else
+            {
+                if (textBoxTenKhachHang.Text.Trim().CompareTo("") == 0)
+                {
+                    MessageBox.Show("Họ tên không được bỏ trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (textBoxTenChuRe.Text.Trim().CompareTo("") == 0)
+                {
+                    MessageBox.Show("Tên chú rể không được bỏ trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (textBoxTenCoDau.Text.Trim().CompareTo("") == 0)
+                {
+                    MessageBox.Show("Tên cô dâu không được bỏ trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (textBoxDiaChi.Text.Trim().CompareTo("") == 0)
+                {
+                    MessageBox.Show("Địa chỉ không được bỏ trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (textBoxEmail.Text.Trim().CompareTo("") == 0)
+                {
+                    MessageBox.Show("Email không được bỏ trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (textBoxDienThoai.Text.Trim().CompareTo("") == 0)
+                {
+                    MessageBox.Show("Số điện thoại không được bỏ trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (textBoxSoLuongBan.Text.Trim().CompareTo("") == 0)
+                {
+                    MessageBox.Show("Số lượng bàn không được bỏ trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (textBoxSLNhanVien.Text.Trim().CompareTo("") == 0)
+                {
+                    MessageBox.Show("Số lượng nhân viên không được bỏ trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+               
+
+            }
+            
+
+            /*int day_Lap = dateTimePickerNgayLap.Value.Day;
+             int month_Lap = dateTimePickerNgayLap.Value.Month;
+             int year_Lap = dateTimePickerNgayLap.Value.Year;
+
+             int day_TC = dateTimePickerNgayToChuc.Value.Day;
+             int month_TC = dateTimePickerNgayToChuc.Value.Month;
+             int year_TC = dateTimePickerNgayToChuc.Value.Year;
+             if(day_Lap > day_TC && month_Lap > month_TC && year_Lap > year_TC)
+             {
+                 MessageBox.Show("Ngày tổ chức phải lớn hơn ngày lập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 return;
+             }*/
         }
         public void Show_ComboboxTenNhanVien()
         {
@@ -153,17 +220,7 @@ namespace QL_TiecCuoi
 
         private void comboBoxLoaiSanh_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /* DataProvider provider = new DataProvider();
-             string a = comboBoxLoaiSanh.SelectedValue.ToString();
-             if (a != "System.Data.DataRowView")
-             {
-                 string query = "select SoLuongBanToiDa from ThongTinSanh where LoaiSanh = '" + a + "'";
-                 DataTable SLBan = provider.ExecuteQuery(query);
-                 textBoxSoLuongBan.Text = SLBan.Rows[0]["SoLuongBanToiDa"].ToString();
-
-
-
-             }*/
+           
         }
 
         private void comboBoxTenNhanVien_SelectedIndexChanged(object sender, EventArgs e)
@@ -178,17 +235,7 @@ namespace QL_TiecCuoi
 
         private void LapHopDong_Load(object sender, EventArgs e)
         {
-            /* DataProvider provider = new DataProvider();
-             string a = comboBoxLoaiSanh.SelectedValue.ToString();
-             if (a != "System.Data.DataRowView")
-             {
-                 string query = "select SoLuongBanToiDa from ThongTinSanh where LoaiSanh = '" + a + "'";
-                 DataTable SLBan = provider.ExecuteQuery(query);
-                 textBoxSoLuongBan.Text = SLBan.Rows[0]["SoLuongBanToiDa"].ToString();
-
-
-
-             }*/
+           
         }
 
         private void comboBoxDichVu_SelectedIndexChanged(object sender, EventArgs e)
@@ -215,34 +262,30 @@ namespace QL_TiecCuoi
                 // Stop the character from being entered into the control since it is illegal.
                 e.Handled = true;
             }
-            //Console.WriteLine(e.KeyChar);
-           // e.Handled = (char.IsNumber(e.KeyChar) || char.IsSymbol(e.KeyChar));
-            /*if(!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
-               {
-                   if (MessageBox.Show("Bạn nhập sai ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.OK)
-                   {
-
-                       Application.Exit();
-                   }
-               }*/
+        
 
 
         }
 
         private void textBoxTenChuRe_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.Handled = !((e.KeyChar >= 65 && e.KeyChar <= 122) || (e.KeyChar == 8)))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"[^0-9^+^\!^\#^\$^\%^\&^\'^\(^\)^\*^\,^\-^\.^\/^\:^\;^\<^\=^\>^\?^\@^\[^\\^\]^\^_^\`^\{^\|^\}^\~]"))
             {
+                // Stop the character from being entered into the control since it is illegal.
                 e.Handled = true;
             }
+           
+           
         }
 
         private void textBoxTenCoDau_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.Handled = !((e.KeyChar >= 65 && e.KeyChar <= 122) || (e.KeyChar == 8)))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"[^0-9^+^\!^\#^\$^\%^\&^\'^\(^\)^\*^\,^\-^\.^\/^\:^\;^\<^\=^\>^\?^\@^\[^\\^\]^\^_^\`^\{^\|^\}^\~]"))
             {
+                // Stop the character from being entered into the control since it is illegal.
                 e.Handled = true;
             }
+           
         }
 
         private void textBoxDienThoai_KeyPress(object sender, KeyPressEventArgs e)
@@ -261,6 +304,7 @@ namespace QL_TiecCuoi
             {
                 e.Handled = true;
             }
+           
         }
 
         private void textBoxSoLuongBan_KeyPress(object sender, KeyPressEventArgs e)
@@ -279,6 +323,43 @@ namespace QL_TiecCuoi
                 e.Handled = true;
 
             }
+        }
+        private ToolTip tooltip;
+      
+        private void textBoxTienCoc_TextChanged(object sender, EventArgs e)
+        {
+            int a;
+            bool isAValid = int.TryParse(textBoxTienCoc.Text.Trim(), out a);
+           
+             if (tooltip == null)
+             {
+                 tooltip = new ToolTip();
+             }
+
+             if (a < 10000000)
+             {
+                 tooltip.Show("Tiền cọc tối thiểu là 10.000.000 đồng", textBoxTienCoc, 2000);
+             }
+           
+       
+
+
+
+        }
+
+        private void textBoxDienThoai_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTenChuRe_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void textBoxTenChuRe_MouseEnter(object sender, EventArgs e)
+        {
+           
         }
     }
 }
