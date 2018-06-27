@@ -308,6 +308,18 @@ Create table NhanVien
 	Ca nvarchar(100) not null,
 
 )
+go
+Create table ChucVu
+(
+	id int  primary key,
+	ChucVu nvarchar(100) not null
+
+)
+insert into ChucVu values( 1, N'Phục vụ')
+insert into ChucVu values( 2,  N'Giám Sát')
+insert into ChucVu values( 3,  N'Quản lý')
+
+delete ChucVu
 Update NhanVien set TenNhanVien='Duy1',SoDienThoai='01223810113',DiaChi='Hoàng Di?u 5',LoaiSanh = 'Loai E',ChucVu='Qu?n lý',Ca='Sáng' where TenNhanVien = 'NV008'
 
 insert into NhanVien values( N'Hoa', N'01223810110',N'Hoàng Diệu 2',N'Loai A', N'Phục vụ', N'Sáng')

@@ -20,7 +20,6 @@ D:\HK2 (năm 2)\Thực hành cnpm\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\bin\Debug\QL_TiecCuoi.exe.config
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\bin\Debug\QL_TiecCuoi.exe
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\bin\Debug\QL_TiecCuoi.pdb
-C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.BaoCao.resources
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.DangNhap.resources
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.LapHoaDon.resources
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.LapHopDong.resources
@@ -36,3 +35,5 @@ C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\ob
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.csprojResolveAssemblyReference.cache
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.ThemSanhMoi.resources
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.ThongTin.resources
+C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.LapBaoCao.resources
+C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.BaoCaoDoanhThu.resources

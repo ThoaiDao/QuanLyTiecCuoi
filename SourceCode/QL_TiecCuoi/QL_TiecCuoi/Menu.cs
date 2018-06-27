@@ -71,9 +71,7 @@ namespace QL_TiecCuoi
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form frm = new BaoCao();
-            frm.ShowDialog();
+           
         }
 
         private void Menu_Load(object sender, EventArgs e)
@@ -85,6 +83,20 @@ namespace QL_TiecCuoi
         {
             this.Hide();
             Form frm = new ThongTin();
+            frm.ShowDialog();
+        }
+
+        private void lậpBáoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frm = new LapBaoCao();
+            frm.ShowDialog();
+        }
+
+        private void báoCáoDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frm = new BaoCaoDoanhThu();
             frm.ShowDialog();
         }
     }

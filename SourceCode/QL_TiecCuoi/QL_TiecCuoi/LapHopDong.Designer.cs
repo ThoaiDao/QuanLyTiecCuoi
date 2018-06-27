@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LapHopDong));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerNgayToChuc = new System.Windows.Forms.DateTimePicker();
             this.textBoxTienCoc = new System.Windows.Forms.TextBox();
             this.labelTienCoc = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
@@ -51,13 +53,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxCa = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBoxTrangThai = new System.Windows.Forms.ComboBox();
             this.comboBoxDichVu = new System.Windows.Forms.ComboBox();
             this.comboBoxThucDon = new System.Windows.Forms.ComboBox();
             this.textBoxSLNhanVien = new System.Windows.Forms.TextBox();
             this.textBoxSoLuongBan = new System.Windows.Forms.TextBox();
             this.comboBoxLoaiSanh = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -68,8 +68,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.dateTimePickerNgayToChuc = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerNgayLap = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -98,10 +98,25 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox1.Location = new System.Drawing.Point(12, 93);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 391);
+            this.groupBox1.Size = new System.Drawing.Size(359, 362);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
+            // 
+            // dateTimePickerNgayLap
+            // 
+            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(122, 25);
+            this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
+            this.dateTimePickerNgayLap.Size = new System.Drawing.Size(225, 22);
+            this.dateTimePickerNgayLap.TabIndex = 31;
+            // 
+            // dateTimePickerNgayToChuc
+            // 
+            this.dateTimePickerNgayToChuc.Location = new System.Drawing.Point(122, 286);
+            this.dateTimePickerNgayToChuc.Name = "dateTimePickerNgayToChuc";
+            this.dateTimePickerNgayToChuc.Size = new System.Drawing.Size(225, 22);
+            this.dateTimePickerNgayToChuc.TabIndex = 30;
+            this.dateTimePickerNgayToChuc.ValueChanged += new System.EventHandler(this.dateTimePickerNgayToChuc_ValueChanged);
             // 
             // textBoxTienCoc
             // 
@@ -255,17 +270,17 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.comboBoxTenNhanVien);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.comboBoxCa);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.comboBoxTrangThai);
             this.groupBox2.Controls.Add(this.comboBoxDichVu);
             this.groupBox2.Controls.Add(this.comboBoxThucDon);
             this.groupBox2.Controls.Add(this.textBoxSLNhanVien);
             this.groupBox2.Controls.Add(this.textBoxSoLuongBan);
             this.groupBox2.Controls.Add(this.comboBoxLoaiSanh);
-            this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label14);
@@ -275,7 +290,7 @@
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.groupBox2.Location = new System.Drawing.Point(377, 93);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(360, 391);
+            this.groupBox2.Size = new System.Drawing.Size(360, 362);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin đặt tiệc";
@@ -308,6 +323,7 @@
             this.comboBoxCa.Name = "comboBoxCa";
             this.comboBoxCa.Size = new System.Drawing.Size(185, 24);
             this.comboBoxCa.TabIndex = 38;
+            this.comboBoxCa.SelectedIndexChanged += new System.EventHandler(this.comboBoxCa_SelectedIndexChanged);
             // 
             // label18
             // 
@@ -318,14 +334,6 @@
             this.label18.Size = new System.Drawing.Size(25, 16);
             this.label18.TabIndex = 37;
             this.label18.Text = "Ca";
-            // 
-            // comboBoxTrangThai
-            // 
-            this.comboBoxTrangThai.FormattingEnabled = true;
-            this.comboBoxTrangThai.Location = new System.Drawing.Point(152, 284);
-            this.comboBoxTrangThai.Name = "comboBoxTrangThai";
-            this.comboBoxTrangThai.Size = new System.Drawing.Size(185, 24);
-            this.comboBoxTrangThai.TabIndex = 36;
             // 
             // comboBoxDichVu
             // 
@@ -368,16 +376,6 @@
             this.comboBoxLoaiSanh.Size = new System.Drawing.Size(185, 24);
             this.comboBoxLoaiSanh.TabIndex = 11;
             this.comboBoxLoaiSanh.SelectedIndexChanged += new System.EventHandler(this.comboBoxLoaiSanh_SelectedIndexChanged);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label17.Location = new System.Drawing.Point(22, 291);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(68, 16);
-            this.label17.TabIndex = 32;
-            this.label17.Text = "Trạng thái";
             // 
             // label16
             // 
@@ -442,7 +440,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(265, 499);
+            this.button2.Location = new System.Drawing.Point(397, 474);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 23);
             this.button2.TabIndex = 4;
@@ -452,7 +450,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(546, 499);
+            this.button3.Location = new System.Drawing.Point(542, 474);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
@@ -462,7 +460,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(662, 499);
+            this.button6.Location = new System.Drawing.Point(662, 474);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 8;
@@ -472,39 +470,42 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(402, 499);
+            this.button4.Location = new System.Drawing.Point(250, 474);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 23);
+            this.button4.Size = new System.Drawing.Size(121, 23);
             this.button4.TabIndex = 9;
             this.button4.Text = "Xem Hợp Đồng";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // dateTimePickerNgayToChuc
+            // button1
             // 
-            this.dateTimePickerNgayToChuc.Location = new System.Drawing.Point(122, 286);
-            this.dateTimePickerNgayToChuc.Name = "dateTimePickerNgayToChuc";
-            this.dateTimePickerNgayToChuc.Size = new System.Drawing.Size(225, 22);
-            this.dateTimePickerNgayToChuc.TabIndex = 30;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(20, 283);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 33);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Kiểm tra trạng thái";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePickerNgayLap
+            // textBox1
             // 
-            this.dateTimePickerNgayLap.Location = new System.Drawing.Point(122, 25);
-            this.dateTimePickerNgayLap.Name = "dateTimePickerNgayLap";
-            this.dateTimePickerNgayLap.Size = new System.Drawing.Size(225, 22);
-            this.dateTimePickerNgayLap.TabIndex = 31;
+            this.textBox1.Location = new System.Drawing.Point(152, 288);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(185, 22);
+            this.textBox1.TabIndex = 39;
             // 
             // LapHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 541);
+            this.ClientSize = new System.Drawing.Size(755, 512);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -545,13 +546,11 @@
         private System.Windows.Forms.TextBox textBoxTenCoDau;
         private System.Windows.Forms.TextBox textBoxTenChuRe;
         private System.Windows.Forms.TextBox textBoxTenKhachHang;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBoxTrangThai;
         private System.Windows.Forms.ComboBox comboBoxDichVu;
         private System.Windows.Forms.ComboBox comboBoxThucDon;
         private System.Windows.Forms.TextBox textBoxSLNhanVien;
@@ -564,5 +563,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayToChuc;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayLap;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

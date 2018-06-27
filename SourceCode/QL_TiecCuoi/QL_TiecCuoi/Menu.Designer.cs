@@ -41,6 +41,8 @@
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.lậpBáoCáoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.báoCáoDoanhThuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -174,6 +176,9 @@
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.BackColor = System.Drawing.SystemColors.InfoText;
+            this.thoátToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lậpBáoCáoToolStripMenuItem,
+            this.báoCáoDoanhThuToolStripMenuItem});
             this.thoátToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thoátToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Control;
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
@@ -193,6 +198,26 @@
             this.thoátToolStripMenuItem1.Text = "Thoát";
             this.thoátToolStripMenuItem1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.thoátToolStripMenuItem1.Click += new System.EventHandler(this.thoátToolStripMenuItem1_Click);
+            // 
+            // lậpBáoCáoToolStripMenuItem
+            // 
+            this.lậpBáoCáoToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lậpBáoCáoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lậpBáoCáoToolStripMenuItem.Name = "lậpBáoCáoToolStripMenuItem";
+            this.lậpBáoCáoToolStripMenuItem.Padding = new System.Windows.Forms.Padding(7);
+            this.lậpBáoCáoToolStripMenuItem.Size = new System.Drawing.Size(237, 36);
+            this.lậpBáoCáoToolStripMenuItem.Text = "Lập Báo Cáo";
+            this.lậpBáoCáoToolStripMenuItem.Click += new System.EventHandler(this.lậpBáoCáoToolStripMenuItem_Click);
+            // 
+            // báoCáoDoanhThuToolStripMenuItem
+            // 
+            this.báoCáoDoanhThuToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlText;
+            this.báoCáoDoanhThuToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.báoCáoDoanhThuToolStripMenuItem.Name = "báoCáoDoanhThuToolStripMenuItem";
+            this.báoCáoDoanhThuToolStripMenuItem.Padding = new System.Windows.Forms.Padding(7);
+            this.báoCáoDoanhThuToolStripMenuItem.Size = new System.Drawing.Size(237, 36);
+            this.báoCáoDoanhThuToolStripMenuItem.Text = "Báo Cáo Doanh Thu";
+            this.báoCáoDoanhThuToolStripMenuItem.Click += new System.EventHandler(this.báoCáoDoanhThuToolStripMenuItem_Click);
             // 
             // panel3
             // 
@@ -266,5 +291,7 @@
         private System.Windows.Forms.ToolStripMenuItem hóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hợpĐồngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lậpBáoCáoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem báoCáoDoanhThuToolStripMenuItem;
     }
 }

@@ -112,6 +112,7 @@
             this.textLoaiSanhThem.Name = "textLoaiSanhThem";
             this.textLoaiSanhThem.Size = new System.Drawing.Size(132, 22);
             this.textLoaiSanhThem.TabIndex = 7;
+            this.textLoaiSanhThem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textLoaiSanhThem_KeyPress);
             // 
             // label6
             // 
@@ -140,6 +141,7 @@
             this.textSLBanThem.Name = "textSLBanThem";
             this.textSLBanThem.Size = new System.Drawing.Size(132, 22);
             this.textSLBanThem.TabIndex = 10;
+            this.textSLBanThem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textSLBanThem_KeyPress);
             // 
             // textDGToiThieuThem
             // 
@@ -148,6 +150,7 @@
             this.textDGToiThieuThem.Name = "textDGToiThieuThem";
             this.textDGToiThieuThem.Size = new System.Drawing.Size(132, 22);
             this.textDGToiThieuThem.TabIndex = 11;
+            this.textDGToiThieuThem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textDGToiThieuThem_KeyPress);
             // 
             // textGhiChuThem
             // 

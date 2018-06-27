@@ -133,6 +133,7 @@
             this.textBoxTenNhanVien.Size = new System.Drawing.Size(150, 22);
             this.textBoxTenNhanVien.TabIndex = 23;
             this.textBoxTenNhanVien.TextChanged += new System.EventHandler(this.textBoxTenNhanVien_TextChanged);
+            this.textBoxTenNhanVien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTenNhanVien_KeyPress);
             // 
             // textBoxSoDienThoai
             // 
@@ -140,6 +141,7 @@
             this.textBoxSoDienThoai.Name = "textBoxSoDienThoai";
             this.textBoxSoDienThoai.Size = new System.Drawing.Size(150, 22);
             this.textBoxSoDienThoai.TabIndex = 24;
+            this.textBoxSoDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSoDienThoai_KeyPress);
             // 
             // label1
             // 

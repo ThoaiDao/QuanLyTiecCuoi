@@ -30,15 +30,15 @@ namespace QL_TiecCuoi
         }
         public void Show_ComboboxMaNhanVien()
         {
-            string query = "select * from NhanVien";
+            string query = "select * from ThongTinSanh";
             DataProvider provider = new DataProvider();
             comboBoxSanh.DataSource = provider.ExecuteQuery(query);
             comboBoxSanh.DisplayMember = "LoaiSanh";
-            comboBoxSanh.ValueMember = "LoaiSanh";
+            comboBoxSanh.ValueMember = "id";
         }
         public void Show_ComboboxChucVu()
         {
-            string query = "select * from NhanVien";
+            string query = "select * from ChucVu";
             DataProvider provider = new DataProvider();
             comboBoxChucVu.DataSource = provider.ExecuteQuery(query);
             comboBoxChucVu.DisplayMember = "ChucVu";
@@ -46,7 +46,7 @@ namespace QL_TiecCuoi
         }
         public void Show_ComboboxCa()
         {
-            string query = "select * from NhanVien";
+            string query = "select * from Tiec";
             DataProvider provider = new DataProvider();
             comboBoxCa.DataSource = provider.ExecuteQuery(query);
             comboBoxCa.DisplayMember = "Ca";
@@ -152,6 +152,24 @@ namespace QL_TiecCuoi
             string query = "select * from NhanVien";
             DataProvider provider = new DataProvider();
             dataGridViewDSNhanVien.DataSource = provider.ExecuteQuery(query);
+        }
+
+        private void textBoxTenNhanVien_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!System.Text.RegularExpressions.Regex.IsMatch(e.KeyChar.ToString(), @"[^0-9^+^\!^\#^\$^\%^\&^\'^\(^\)^\*^\,^\-^\.^\/^\:^\;^\<^\=^\>^\?^\@^\[^\\^\]^\^_^\`^\{^\|^\}^\~]"))
+            {
+                // Stop the character from being entered into the control since it is illegal.
+                e.Handled = true;
+            }
+        }
+
+        private void textBoxSoDienThoai_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+
+            }
         }
     }
 }

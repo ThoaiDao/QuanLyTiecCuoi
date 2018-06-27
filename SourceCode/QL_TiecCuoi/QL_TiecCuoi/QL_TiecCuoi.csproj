@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaoCao.cs">
+    <Compile Include="BaoCaoDoanhThu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaoCao.Designer.cs">
-      <DependentUpon>BaoCao.cs</DependentUpon>
+    <Compile Include="BaoCaoDoanhThu.Designer.cs">
+      <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LapBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LapBaoCao.Designer.cs">
+      <DependentUpon>LapBaoCao.cs</DependentUpon>
     </Compile>
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
@@ -120,8 +126,11 @@
     <Compile Include="TraCuuNhanVien.Designer.cs">
       <DependentUpon>TraCuuNhanVien.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaoCao.resx">
-      <DependentUpon>BaoCao.cs</DependentUpon>
+    <EmbeddedResource Include="BaoCaoDoanhThu.resx">
+      <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LapBaoCao.resx">
+      <DependentUpon>LapBaoCao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
