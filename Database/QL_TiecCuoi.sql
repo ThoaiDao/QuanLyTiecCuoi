@@ -114,8 +114,8 @@ Create table Tiec
 	Ca nvarchar(20),
 	TrangThai nvarchar(100) default N'Chưa săn sàng'
 )
-insert into Tiec values (N'Trưa', N'Chưa sẵn sàng')
-insert into Tiec values (N'Tối', N'sẵn sàng')
+insert into Tiec values (N'Trua', N'Chưa sẵn sàng')
+insert into Tiec values (N'Toi', N'sẵn sàng')
 select * from Tiec
 drop table Tiec
 
@@ -124,7 +124,7 @@ drop table Tiec
 Create table ThongTinkhachHang
 (
 	id int identity(1,1),
-	MaKhachHang  AS RIGHT('KH00' + CAST(id AS VARCHAR(6)), 6) PERSISTED,
+	MaKhachHang  AS RIGHT('KH' + CAST(id AS VARCHAR(7)), 7) PERSISTED,
 	NgayLap date not null,
 	TenKhachHang nvarchar(100) not null,
 	TenChuRe nvarchar(100) not null,
@@ -156,7 +156,7 @@ go
 Create table ThongTinDatTiec
 (
 	id int identity(1,1) ,
-	MaDatTiec  AS RIGHT('DT' + CAST(id AS VARCHAR(5)), 5) PERSISTED,
+	MaDatTiec  AS RIGHT('DT' + CAST(id AS VARCHAR(7)), 7) PERSISTED,
 	IDNhanVien int FOREIGN KEY REFERENCES NhanVienTiepTan(id),
 	IDThongTinKhachHang int FOREIGN KEY REFERENCES ThongTinKhachHang(id),
 	IdLoaiSanh int FOREIGN KEY REFERENCES ThongTinSanh(id),
@@ -164,7 +164,7 @@ Create table ThongTinDatTiec
 	IdThucDon int FOREIGN KEY REFERENCES ThucDon(id),
 	SoLuongNhanVien int not null,
 	SoLuongBan int,
-	TrangThai nvarchar(100) not null, 
+	--TrangThai nvarchar(100) not null, 
 	Ca nvarchar(100) not null,
 	primary key(id )
 )
@@ -234,7 +234,7 @@ go
 Create table HoaDon
 (
 	id int identity(1,1) primary key,
-	MaHoaDon  AS RIGHT('HĐ00' + CAST(id AS VARCHAR(7)), 7) PERSISTED,
+	MaHoaDon  AS RIGHT('HĐ' + CAST(id AS VARCHAR(7)), 7) PERSISTED,
 	IdMaDatTiec int FOREIGN KEY REFERENCES ThongTinDatTiec(id),
 	IDThongTinKhachHang int FOREIGN KEY REFERENCES ThongTinKhachHang(id),
 	IdLoaiSanh int FOREIGN KEY REFERENCES ThongTinSanh(id),
@@ -284,10 +284,10 @@ select * from NhanVienTiepTan
 Drop table NhanVienTiepTan
 go
 
-insert into NhanVienTiepTan values( 1, N'NV1',N'Huyền Thoại', N'01223810110',N'Hoàng Diệu 2', N'Sáng')
-insert into NhanVienTiepTan values(2, N'NV2', N'Thu Thiên', N'01223810111',N'Hoàng Diệu 3', N'Trưa')
-insert into NhanVienTiepTan values(3, N'NV3',N'Thái Dương', N'01223810112',N'Hoàng Diệu 4', N'Tối')
-insert into NhanVienTiepTan values(4,N'NV4', N'Duy Tân', N'01223810113',N'Hoàng Diệu 5', N'Sáng')
+insert into NhanVienTiepTan values( 1, N'NV001',N'Huyền Thoại', N'01223810110',N'Hoàng Diệu 2', N'Sáng')
+insert into NhanVienTiepTan values(2, N'NV002', N'Thu Thiên', N'01223810111',N'Hoàng Diệu 3', N'Trưa')
+insert into NhanVienTiepTan values(3, N'NV003',N'Thái Dương', N'01223810112',N'Hoàng Diệu 4', N'Tối')
+insert into NhanVienTiepTan values(4,N'NV004', N'Duy Tân', N'01223810113',N'Hoàng Diệu 5', N'Sáng')
 go
 select * from NhanVienTiepTan
 delete from NhanVienTiepTan
@@ -339,23 +339,32 @@ drop table NhanVien
 
 --Bao cao
 
-Create table BaoCaoDoanhThu
+Create table LapBaoCao
 (
 	id int identity(1,1) primary key,
 	MaBaoCao AS RIGHT('BC00' + CAST(id AS VARCHAR(5)), 5) PERSISTED,
-	MaNhanVien nvarchar(100),
-	ThangBaoCao nvarchar(100) not null,
-	NamBaoCao nvarchar(100) not null,
 	NgayLap date not null,
+	TenNguoiLap nvarchar(100),
+	Thang int,
 	SoLuongTiec int,
+	DoanhThu int
+
+)
+go
+select * from LapBaoCao
+drop table LapBaoCao
+
+go
+Create table BaoCaoDoanhThu
+(
+	id int identity(1,1) primary key,
+	Thang int,
+	TongDoanhThu int
 
 )
 go
 select * from BaoCaoDoanhThu
 drop table BaoCaoDoanhThu
-go
-
-
  
 
 

@@ -68,8 +68,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -163,6 +162,34 @@
             // 
             // textBoxTenCoDau
             // 
+            this.textBoxTenCoDau.AutoCompleteCustomSource.AddRange(new string[] {
+            "Dương",
+            "Phạm",
+            "Trần",
+            "Nguyễn",
+            "Lê",
+            "Trịnh",
+            "Phan",
+            "Vũ",
+            "Võ",
+            "Đặng",
+            "Bùi",
+            "Đỗ",
+            "Hồ",
+            "Ngô",
+            "Đoàn",
+            "Thân",
+            "Trương",
+            "Quách",
+            "Bạch",
+            "Lý",
+            "Đào",
+            "Hà",
+            "Hoàng",
+            "Huynh",
+            "Hồ"});
+            this.textBoxTenCoDau.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBoxTenCoDau.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxTenCoDau.Location = new System.Drawing.Point(122, 133);
             this.textBoxTenCoDau.Name = "textBoxTenCoDau";
             this.textBoxTenCoDau.Size = new System.Drawing.Size(225, 22);
@@ -171,6 +198,34 @@
             // 
             // textBoxTenChuRe
             // 
+            this.textBoxTenChuRe.AutoCompleteCustomSource.AddRange(new string[] {
+            "Dương",
+            "Phạm",
+            "Trần",
+            "Nguyễn",
+            "Lê",
+            "Trịnh",
+            "Phan",
+            "Vũ",
+            "Võ",
+            "Đặng",
+            "Bùi",
+            "Đỗ",
+            "Hồ",
+            "Ngô",
+            "Đoàn",
+            "Thân",
+            "Trương",
+            "Quách",
+            "Bạch",
+            "Lý",
+            "Đào",
+            "Hà",
+            "Hoàng",
+            "Huynh",
+            "Hồ"});
+            this.textBoxTenChuRe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBoxTenChuRe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxTenChuRe.Location = new System.Drawing.Point(122, 96);
             this.textBoxTenChuRe.Name = "textBoxTenChuRe";
             this.textBoxTenChuRe.Size = new System.Drawing.Size(225, 22);
@@ -181,6 +236,35 @@
             // 
             // textBoxTenKhachHang
             // 
+            this.textBoxTenKhachHang.AutoCompleteCustomSource.AddRange(new string[] {
+            "Dương",
+            "Phạm",
+            "Trần",
+            "Nguyễn",
+            "Lê",
+            "Trịnh",
+            "Phan",
+            "Vũ",
+            "Võ",
+            "Đặng",
+            "Bùi",
+            "Đỗ",
+            "Hồ",
+            "Ngô",
+            "Đoàn",
+            "Thân",
+            "Trương",
+            "Quách",
+            "Bạch",
+            "",
+            "Lý",
+            "Đào",
+            "Hà",
+            "Hoàng",
+            "Huynh",
+            "Hồ"});
+            this.textBoxTenKhachHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBoxTenKhachHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxTenKhachHang.Location = new System.Drawing.Point(122, 63);
             this.textBoxTenKhachHang.Name = "textBoxTenKhachHang";
             this.textBoxTenKhachHang.Size = new System.Drawing.Size(225, 22);
@@ -270,8 +354,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.comboBoxTenNhanVien);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.comboBoxCa);
@@ -440,7 +522,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(397, 474);
+            this.button2.Location = new System.Drawing.Point(253, 474);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 23);
             this.button2.TabIndex = 4;
@@ -450,7 +532,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(542, 474);
+            this.button3.Location = new System.Drawing.Point(550, 474);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
@@ -470,7 +552,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(250, 474);
+            this.button4.Location = new System.Drawing.Point(397, 474);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 23);
             this.button4.TabIndex = 9;
@@ -478,28 +560,21 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button1
+            // button5
             // 
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(20, 283);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 33);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Kiểm tra trạng thái";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(152, 288);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 22);
-            this.textBox1.TabIndex = 39;
+            this.button5.Location = new System.Drawing.Point(102, 474);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(113, 23);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "In Hợp Đồng";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // LapHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 512);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button3);
@@ -563,7 +638,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayToChuc;
         private System.Windows.Forms.DateTimePicker dateTimePickerNgayLap;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button5;
     }
 }

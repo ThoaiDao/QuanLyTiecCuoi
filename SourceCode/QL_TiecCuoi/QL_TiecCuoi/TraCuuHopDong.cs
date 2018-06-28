@@ -85,21 +85,21 @@ namespace QL_TiecCuoi
                 string IdThucDon = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[6].Value.ToString().Trim());
                 string soluongnhanvien = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[7].Value.ToString().Trim());
                 string soluongban = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[8].Value.ToString().Trim());
-                string trangthai = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[9].Value.ToString().Trim());
-                string ca = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[10].Value.ToString().Trim());
+                //string trangthai = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[9].Value.ToString().Trim());
+                string ca = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[9].Value.ToString().Trim());
 
 
-                string id = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[11].Value.ToString().Trim());
-                string makhachhang = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[12].Value.ToString().Trim());
-                string ngaylap = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[13].Value.ToString().Trim());
-                string tenkhachhang = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[14].Value.ToString().Trim());
-                string tenchure = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[15].Value.ToString().Trim());
-                string tencodau = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[16].Value.ToString().Trim());
-                string diachi = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[17].Value.ToString().Trim());
-                string dienthoai = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[18].Value.ToString().Trim());
-                string email = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[19].Value.ToString().Trim());
-                string ngaytochuc = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[20].Value.ToString().Trim());
-                string tiencoc = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[21].Value.ToString().Trim());
+                string id = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[10].Value.ToString().Trim());
+                string makhachhang = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[11].Value.ToString().Trim());
+                string ngaylap = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[12].Value.ToString().Trim());
+                string tenkhachhang = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[13].Value.ToString().Trim());
+                string tenchure = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[14].Value.ToString().Trim());
+                string tencodau = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[15].Value.ToString().Trim());
+                string diachi = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[16].Value.ToString().Trim());
+                string dienthoai = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[17].Value.ToString().Trim());
+                string email = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[18].Value.ToString().Trim());
+                string ngaytochuc = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[19].Value.ToString().Trim());
+                string tiencoc = Convert.ToString(dataGridViewTraCuuHopDong.Rows[CurrentIndex].Cells[20].Value.ToString().Trim());
 
                 string updateStr1 = "Update ThongTinKhachHang set NgayLap='"
                    + ngaylap + "',TenKhachHang='"
@@ -115,8 +115,7 @@ namespace QL_TiecCuoi
 
                 string updateStr2 = "Update ThongTinDatTiec set SoLuongNhanVien='"
                    + soluongnhanvien + "',SoLuongBan='"
-                   + soluongban + "', TrangThai='"
-                   + trangthai + "', Ca='"
+                   + soluongban + "', Ca='"
                    + ca +"' where ThongTinDatTiec.id = '" + ID + "'";
                 //Console.WriteLine(updateStr2);
                 provider.ExecuteUpdate(updateStr2);

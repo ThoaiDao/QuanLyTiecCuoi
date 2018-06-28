@@ -169,9 +169,9 @@ namespace QL_TiecCuoi
             // 
             this.button1.Location = new System.Drawing.Point(564, 97);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 23);
+            this.button1.Size = new System.Drawing.Size(75, 20);
             this.button1.TabIndex = 28;
-            this.button1.Text = "Xem Thông Tin Hợp Đồng";
+            this.button1.Text = "Xem ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -182,9 +182,9 @@ namespace QL_TiecCuoi
             this.label13.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label13.Location = new System.Drawing.Point(231, 101);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 16);
+            this.label13.Size = new System.Drawing.Size(87, 16);
             this.label13.TabIndex = 19;
-            this.label13.Text = "Mã phiếu đặt tiệc";
+            this.label13.Text = "Mã hợp đồng";
             // 
             // groupBox5
             // 

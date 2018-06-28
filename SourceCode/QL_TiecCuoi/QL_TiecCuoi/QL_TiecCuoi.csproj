@@ -52,6 +52,12 @@
     <Compile Include="BaoCaoDoanhThu.Designer.cs">
       <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="DiaChiNhaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DiaChiNhaHang.Designer.cs">
+      <DependentUpon>DiaChiNhaHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="LapBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="BaoCaoDoanhThu.resx">
       <DependentUpon>BaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DiaChiNhaHang.resx">
+      <DependentUpon>DiaChiNhaHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LapBaoCao.resx">
       <DependentUpon>LapBaoCao.cs</DependentUpon>

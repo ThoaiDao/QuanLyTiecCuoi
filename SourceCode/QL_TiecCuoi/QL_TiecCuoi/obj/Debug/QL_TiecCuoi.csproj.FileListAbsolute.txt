@@ -37,3 +37,4 @@ C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\ob
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.ThongTin.resources
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.LapBaoCao.resources
 C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.BaoCaoDoanhThu.resources
+C:\Users\Quynh\Documents\GitHub\GroupBlack\SourceCode\QL_TiecCuoi\QL_TiecCuoi\obj\Debug\QL_TiecCuoi.DiaChiNhaHang.resources

@@ -59,7 +59,7 @@ namespace QL_TiecCuoi
         private void button3_Click(object sender, EventArgs e)
         {
             Console.WriteLine("nhutdev");
-            if (textBoxTenKhachHang.Text != "" && textBoxTenChuRe.Text != "" && textBoxTenCoDau.Text != "" && textBoxDienThoai.Text != "" && textBoxDiaChi.Text != "" && textBoxEmail.Text != "" && textBoxTienCoc.Text != "" && textBoxSoLuongBan.Text != "" && textBoxSLNhanVien.Text != "")
+            if (textBoxTenKhachHang.Text != "" && textBoxTenChuRe.Text != "" && textBoxTenCoDau.Text != "" && textBoxDienThoai.Text != "" && textBoxDiaChi.Text != "" && textBoxEmail.Text != "" && textBoxTienCoc.Text != "" && textBoxSoLuongBan.Text != "" && textBoxSLNhanVien.Text != "" )
             {
                 int a;
                 bool isAValid = int.TryParse(textBoxTienCoc.Text.Trim(), out a);
@@ -73,8 +73,9 @@ namespace QL_TiecCuoi
 
                     int b;
                     bool isAValid_1 = int.TryParse(textBoxSoLuongBan.Text.Trim(), out b);
-                    string sCombobox = this.comboBoxLoaiSanh.ToString();
-                    Console.WriteLine("nhutdev", b);
+                    string sCombobox = this.comboBoxLoaiSanh.Text.Normalize();
+                    Console.WriteLine(sCombobox);
+                    Console.WriteLine("nhutdev 1", this.comboBoxLoaiSanh.SelectedText);
                     if (comboBoxLoaiSanh.Text.CompareTo("Loai A") == 0)
                     {
                         if (b > 500)
@@ -118,13 +119,17 @@ namespace QL_TiecCuoi
                                         + comboBoxThucDon.SelectedValue.ToString().Trim() + "','"
                                         + textBoxSLNhanVien.Text + "' , '"
                                         + textBoxSoLuongBan.Text + "', '"
+                                       /// + textBoxTrangThai.Text + "', '"
                                         + comboBoxCa.SelectedValue.ToString().Trim() + "' )";
                                 string query3 = "Insert into NhanVienTiepTan(TenNhanVien) values ( '" + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + "')";
                                 Console.WriteLine("Query 1", query1);
-                                provider.ExecuteWrite(query1);
-                                provider.ExecuteWrite(query2);
-                                provider.ExecuteWrite(query3);
-                                MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                                if (KtraToChuc())
+                                {
+                                    provider.ExecuteWrite(query1);
+                                    provider.ExecuteWrite(query2);
+                                    provider.ExecuteWrite(query3);
+                                    MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                                }
                             }
                         }
                       
@@ -166,7 +171,7 @@ namespace QL_TiecCuoi
                                      //+ textBoxNgayToChuc.Text + "', '"
                                      + textBoxTienCoc.Text + "')";
                                 int IdThongTinKhachHang = provider.ExecuteWrite(query1);
-                                string query2 = "Insert into ThongTinDatTiec (IDNhanVien,IDThongTinKhachHang,IdLoaiSanh,IdDichVu,IdThucDon,SoLuongNhanVien, SoLuongBan,Ca) Values("
+                                string query2 = "Insert into ThongTinDatTiec (IDNhanVien,IDThongTinKhachHang,IdLoaiSanh,IdDichVu,IdThucDon,SoLuongNhanVien, SoLuongBan,  Ca) Values("
                                         + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + ","
                                         + IdThongTinKhachHang + ",'"
                                         + comboBoxLoaiSanh.SelectedValue.ToString().Trim() + "','"
@@ -174,14 +179,17 @@ namespace QL_TiecCuoi
                                         + comboBoxThucDon.SelectedValue.ToString().Trim() + "','"
                                         + textBoxSLNhanVien.Text + "' , '"
                                         + textBoxSoLuongBan.Text + "', '"
-
+                                        // + textBoxTrangThai.Text + "', '"
                                         + comboBoxCa.SelectedValue.ToString().Trim() + "' )";
                                 string query3 = "Insert into NhanVienTiepTan(TenNhanVien) values ( '" + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + "')";
                                 Console.WriteLine("Query 1", query1);
-                                provider.ExecuteWrite(query1);
-                                provider.ExecuteWrite(query2);
-                                provider.ExecuteWrite(query3);
-                                MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                                if (KtraToChuc())
+                                {
+                                    provider.ExecuteWrite(query1);
+                                    provider.ExecuteWrite(query2);
+                                    provider.ExecuteWrite(query3);
+                                    MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                                }
                             }
                         }
 
@@ -221,7 +229,7 @@ namespace QL_TiecCuoi
                                      //+ textBoxNgayToChuc.Text + "', '"
                                      + textBoxTienCoc.Text + "')";
                                 int IdThongTinKhachHang = provider.ExecuteWrite(query1);
-                                string query2 = "Insert into ThongTinDatTiec (IDNhanVien,IDThongTinKhachHang,IdLoaiSanh,IdDichVu,IdThucDon,SoLuongNhanVien, SoLuongBan,Ca) Values("
+                                string query2 = "Insert into ThongTinDatTiec (IDNhanVien,IDThongTinKhachHang,IdLoaiSanh,IdDichVu,IdThucDon,SoLuongNhanVien, SoLuongBan, Ca) Values("
                                         + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + ","
                                         + IdThongTinKhachHang + ",'"
                                         + comboBoxLoaiSanh.SelectedValue.ToString().Trim() + "','"
@@ -229,14 +237,18 @@ namespace QL_TiecCuoi
                                         + comboBoxThucDon.SelectedValue.ToString().Trim() + "','"
                                         + textBoxSLNhanVien.Text + "' , '"
                                         + textBoxSoLuongBan.Text + "', '"
-
+                                       //+ textBoxTrangThai.Text + "', '"
                                         + comboBoxCa.SelectedValue.ToString().Trim() + "' )";
                                 string query3 = "Insert into NhanVienTiepTan(TenNhanVien) values ( '" + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + "')";
                                 Console.WriteLine("Query 1", query1);
-                                provider.ExecuteWrite(query1);
-                                provider.ExecuteWrite(query2);
-                                provider.ExecuteWrite(query3);
-                                MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+
+                                if (KtraToChuc())
+                                {
+                                    provider.ExecuteWrite(query1);
+                                    provider.ExecuteWrite(query2);
+                                    provider.ExecuteWrite(query3);
+                                    MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                                }
                             }
                         }
 
@@ -276,7 +288,7 @@ namespace QL_TiecCuoi
                                      //+ textBoxNgayToChuc.Text + "', '"
                                      + textBoxTienCoc.Text + "')";
                                 int IdThongTinKhachHang = provider.ExecuteWrite(query1);
-                                string query2 = "Insert into ThongTinDatTiec (IDNhanVien,IDThongTinKhachHang,IdLoaiSanh,IdDichVu,IdThucDon,SoLuongNhanVien, SoLuongBan,Ca) Values("
+                                string query2 = "Insert into ThongTinDatTiec (IDNhanVien,IDThongTinKhachHang,IdLoaiSanh,IdDichVu,IdThucDon,SoLuongNhanVien, SoLuongBan, Ca) Values("
                                         + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + ","
                                         + IdThongTinKhachHang + ",'"
                                         + comboBoxLoaiSanh.SelectedValue.ToString().Trim() + "','"
@@ -284,14 +296,17 @@ namespace QL_TiecCuoi
                                         + comboBoxThucDon.SelectedValue.ToString().Trim() + "','"
                                         + textBoxSLNhanVien.Text + "' , '"
                                         + textBoxSoLuongBan.Text + "', '"
+                                       //+ textBoxTrangThai.Text + "', '"
                                         + comboBoxCa.SelectedValue.ToString().Trim() + "' )";
                                 string query3 = "Insert into NhanVienTiepTan(TenNhanVien) values ( '" + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + "')";
 
-                                Console.WriteLine("Query 1", query1);
-                                provider.ExecuteWrite(query1);
-                                provider.ExecuteWrite(query2);
-                                provider.ExecuteWrite(query3);
-                                MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                                if (KtraToChuc()) {
+                                    provider.ExecuteWrite(query1);
+                                    provider.ExecuteWrite(query2);
+                                    provider.ExecuteWrite(query3);
+                                    MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                                }
+                                
                             }
                         }
 
@@ -332,7 +347,7 @@ namespace QL_TiecCuoi
                                      //+ textBoxNgayToChuc.Text + "', '"
                                      + textBoxTienCoc.Text + "')";
                                 int IdThongTinKhachHang = provider.ExecuteWrite(query1);
-                                string query2 = "Insert into ThongTinDatTiec (IDNhanVien,IDThongTinKhachHang,IdLoaiSanh,IdDichVu,IdThucDon,SoLuongNhanVien, SoLuongBan,Ca) Values("
+                                string query2 = "Insert into ThongTinDatTiec (IDNhanVien,IDThongTinKhachHang,IdLoaiSanh,IdDichVu,IdThucDon,SoLuongNhanVien, SoLuongBan, Ca) Values("
                                         + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + ","
                                         + IdThongTinKhachHang + ",'"
                                         + comboBoxLoaiSanh.SelectedValue.ToString().Trim() + "','"
@@ -340,14 +355,18 @@ namespace QL_TiecCuoi
                                         + comboBoxThucDon.SelectedValue.ToString().Trim() + "','"
                                         + textBoxSLNhanVien.Text + "' , '"
                                         + textBoxSoLuongBan.Text + "', '"
-
+                                      // + textBoxTrangThai.Text + "', '"
                                         + comboBoxCa.SelectedValue.ToString().Trim() + "' )";
                                 string query3 = "Insert into NhanVienTiepTan(TenNhanVien) values ( '" + comboBoxTenNhanVien.SelectedValue.ToString().Trim() + "')";
                                 Console.WriteLine("Query 1", query1);
-                                provider.ExecuteWrite(query1);
-                                provider.ExecuteWrite(query2);
-                                provider.ExecuteWrite(query3);
-                                MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                                if (KtraToChuc())
+                                {
+                                    provider.ExecuteWrite(query1);
+                                    provider.ExecuteWrite(query2);
+                                    provider.ExecuteWrite(query3);
+                                    MessageBox.Show("Bạn đã lưu thành công!", "THÔNG BÁO", MessageBoxButtons.OK);
+                                }
+                           
                             }
                         }
 
@@ -355,18 +374,7 @@ namespace QL_TiecCuoi
 
                 }
 
-                /*int day_Lap = dateTimePickerNgayLap.Value.Day;
-                 int month_Lap = dateTimePickerNgayLap.Value.Month;
-                 int year_Lap = dateTimePickerNgayLap.Value.Year;
-
-                 int day_TC = dateTimePickerNgayToChuc.Value.Day;
-                 int month_TC = dateTimePickerNgayToChuc.Value.Month;
-                 int year_TC = dateTimePickerNgayToChuc.Value.Year;
-                 if(day_Lap > day_TC && month_Lap > month_TC && year_Lap > year_TC)
-                 {
-                     MessageBox.Show("Ngày tổ chức phải lớn hơn ngày lập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                     return;
-                 }*/
+                
             }
             else
             {
@@ -429,7 +437,7 @@ namespace QL_TiecCuoi
             DataProvider provider = new DataProvider();
             comboBoxLoaiSanh.DataSource = provider.ExecuteQuery(query);
             comboBoxLoaiSanh.DisplayMember = "LoaiSanh";
-            comboBoxLoaiSanh.ValueMember = "LoaiSanh";
+            comboBoxLoaiSanh.ValueMember = "id";//testing
         }
 
         public void Show_ComboboxCa()
@@ -438,7 +446,7 @@ namespace QL_TiecCuoi
             DataProvider provider = new DataProvider();
             comboBoxCa.DataSource = provider.ExecuteQuery(query);
             comboBoxCa.DisplayMember = "Ca";
-            comboBoxCa.ValueMember = "Ca";
+            comboBoxCa.ValueMember = "Ca";//test
         }
 
         public void Show_ComboboxThucDon()
@@ -613,6 +621,27 @@ namespace QL_TiecCuoi
         private void comboBoxCa_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private bool KtraToChuc()
+        {
+            string formatDate = "MM/dd/yyyy";
+            string ngayToChuc = dateTimePickerNgayToChuc.Value.ToString(formatDate);
+            string loaiSanh = comboBoxLoaiSanh.SelectedValue.ToString().Trim();
+            string ca = comboBoxCa.SelectedValue.ToString().Trim();
+            string query0 = "select count(*) as count from ThongTinDatTiec a left join ThongTinKhachHang p on p.id = a.IDThongTinKhachHang where p.NgayToChuc = '"+ ngayToChuc +"' and a.Ca = '"+ca+"' and a.IdLoaiSanh = '"+loaiSanh+"'";
+            DataProvider provider = new DataProvider();
+            DataTable t = provider.ExecuteQuery(query0);
+            int a;
+            int.TryParse(t.Rows[0]["count"].ToString(), out a);
+           // Console.WriteLine("----------------------------");
+            Console.WriteLine(a);
+            if (a > 0)
+            {
+                MessageBox.Show("Đã có khách đặt!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -128,6 +128,34 @@
             // 
             // textBoxTenNhanVien
             // 
+            this.textBoxTenNhanVien.AutoCompleteCustomSource.AddRange(new string[] {
+            "Dương",
+            "Phạm",
+            "Trần",
+            "Nguyễn",
+            "Lê",
+            "Trịnh",
+            "Phan",
+            "Vũ",
+            "Võ",
+            "Đặng",
+            "Bùi",
+            "Đỗ",
+            "Hồ",
+            "Ngô",
+            "Đoàn",
+            "Thân",
+            "Trương",
+            "Quách",
+            "Bạch",
+            "Lý",
+            "Đào",
+            "Hà",
+            "Hoàng",
+            "Huynh",
+            "Hồ"});
+            this.textBoxTenNhanVien.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.textBoxTenNhanVien.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBoxTenNhanVien.Location = new System.Drawing.Point(144, 16);
             this.textBoxTenNhanVien.Name = "textBoxTenNhanVien";
             this.textBoxTenNhanVien.Size = new System.Drawing.Size(150, 22);
