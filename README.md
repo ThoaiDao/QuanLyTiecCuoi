@@ -2,16 +2,16 @@
 [![N|Solid](https://i.imgur.com/co6SMdm.png)](https://www.uit.edu.vn/)
 
 ---
-# Tên Đề Tài: Phần mềm quản lý tiệc cưới
+# Tên đề tài: Phần mềm quản lý tiệc cưới
 
-### Giới Thiệu Nhóm
+### Giới thiệu nhóm
 
 ><p>Tên Nhóm: Nhóm Black</p>
 ><p>Khoa: Hệ Thống Thông Tin</p>
 ><p>Thành Viên: Huyền Thoại, Thu Thiên, Thái Dương, Duy Tân</p>
 ><p>Giảng Viên: Nguyễn Công Hoan</p>
 
-_**Giới Thiệu**_
+_**Giới thiệu**_
 >Hiện tại nhiều nhà hàng chưa có một chương trình chuyên quản lý việc đặt tiệc, thanh toán. Nhân viên của nhà hàng dùng các phiếu đặt tiệc, hóa đơn in sẵn. Chính vì thế đã gặp một vài khó khăn như sau: 
   >- Những xử lý thủ tục đặt tiệc, thanh toán mất rất nhiều thời gian và vẫn còn thực hiện thủ công, có thể có sai sót trong tính toán.
   >- Khó kiểm tra trạng thái sảnh hiện tại đã được đặt chưa.
@@ -40,7 +40,7 @@ _**Chức năng & Mô tả**_
    Cập Nhật Quy Định |  Thay đổi thêm, xóa, cập nhật của loại sảnh, loại ca, dịch vụ và món ăn |
    Thông Tin |  Cho khách hàng xem trước thông tin nhà hàng, thông tin tiệc cưới gồm:dịch vụ và các loại sảnh |
    
-   _**Thông Tin Về Thành Viên**_
+   _**Thông tin về thành viên**_
 
 
 
